@@ -562,6 +562,7 @@ nav a.active {
     .location-images {
         grid-template-columns: 1fr 1fr;
         /* Dos fotitos una al lado de otra */
+            grid-template-rows: none;
         order: 2;
     }
 

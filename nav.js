@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="nav-right">
         
         <nav>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <ul id="menu">
-        <li><a href="index.html" id="nav-index">Inici</a></li>
-        <li><a href="participacio.html" id="nav-participacio">Participació</a></li>
-        <li><a href="programa.html" id="nav-programa">Programa</a></li>
-        <li><a href="inscripcion.html" id="nav-temas">Inscripció</a></li>
-        </ul>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" id="nav-index"></a></li>
+                <li><a href="participacio.html" id="nav-participacio"></a></li>
+                <li><a href="programa.html" id="nav-programa"></a></li>
+                <li><a href="inscripcion.html" id="nav-temas"></a></li>
+            </ul>
         </nav>
         <button class="lang-btn" id="btn-lang"><span>CAT</span><span>ES</span></button>
         </div>
@@ -34,7 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 3️⃣ JSON con todas las traducciones
     const translations = {
+
         "index.html": {
+            "nav-index": {
+                ca: "Inici",
+                es: "Inicio"
+            },
+            "nav-participacio": {
+                ca: "Participació",
+                es: "Participación"
+            },
+            "nav-programa": {
+                ca: "Programa",
+                es: "Programa"
+            },
+            "nav-temas": {
+                ca: "Inscripció",
+                es: "Inscripción"
+            },
             "hero-title": {
                 "ca": "I Jornada d'Acollida Sociolingüística",
                 "es": "I Jornada de Acogida Sociolingüística"
@@ -57,6 +74,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
         "participacio.html": {
+            "nav-index": {
+                ca: "Inici",
+                es: "Inicio"
+            },
+            "nav-participacio": {
+                ca: "Participació",
+                es: "Participación"
+            },
+            "nav-programa": {
+                ca: "Programa",
+                es: "Programa"
+            },
+            "nav-temas": {
+                ca: "Inscripció",
+                es: "Inscripción"
+            },
             "page-header-title": {
                 "ca": "Participació",
                 "es": "Participación"
@@ -134,6 +167,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
         "programa.html": {
+            "nav-index": {
+                ca: "Inici",
+                es: "Inicio"
+            },
+            "nav-participacio": {
+                ca: "Participació",
+                es: "Participación"
+            },
+            "nav-programa": {
+                ca: "Programa",
+                es: "Programa"
+            },
+            "nav-temas": {
+                ca: "Inscripció",
+                es: "Inscripción"
+            },
             "page-header-title": { "ca": "Programa de la Jornada", "es": "Programa de la Jornada" },
             "programa-item-1": { "ca": "Benvinguda i registre", "es": "Bienvenida y registro" },
             "programa-item-2": { "ca": "Ponència inaugural", "es": "Ponencia inaugural" },
@@ -148,6 +197,22 @@ document.addEventListener("DOMContentLoaded", function () {
             "footer-text": { "ca": "© 2026 Coordinadora de la Llengua de Barcelona", "es": "© 2026 Coordinadora de la Lengua de Barcelona" }
         },
         "inscripcion.html": {
+            "nav-index": {
+                ca: "Inici",
+                es: "Inicio"
+            },
+            "nav-participacio": {
+                ca: "Participació",
+                es: "Participación"
+            },
+            "nav-programa": {
+                ca: "Programa",
+                es: "Programa"
+            },
+            "nav-temas": {
+                ca: "Inscripció",
+                es: "Inscripción"
+            },
             "page-header-title": {
                 "ca": "Inscripció",
                 "es": "Inscripción"
