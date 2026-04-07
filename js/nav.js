@@ -1,10 +1,12 @@
 // ====================== NAV.JS ======================
+// ================= CONFIG =================
+const BASE_PATH = ''
 
 function loadNav() {
   const navContainer = document.getElementById('main-nav');
   if (!navContainer) return;
 
-const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
+  const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
   // 🔹 Items del programa (dinámico)
   const programItems = [
     { time: "8:30", key: "card0_Title" },
@@ -37,7 +39,7 @@ const isHome = window.location.pathname === '/' || window.location.pathname === 
         <div class="flex justify-between items-center">
 
           <!-- LOGO -->
-          <a href="index.html">
+            <a href="${BASE_PATH}index.html">
             <img src="img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
           </a>
 
@@ -127,7 +129,7 @@ function initNavEvents() {
 
   menuToggle.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
-    
+
     if (isOpen) {
       icon.classList.remove('fa-bars');
       icon.classList.add('fa-times');
@@ -242,7 +244,7 @@ function goToProgram(index) {
     setTimeout(() => menu.classList.add('hidden'), 300);
   }
 
-  window.location.href = `/programa.html?item=${index}`;
+  window.location.href = `${BASE_PATH}programa.html?item=${index}`;
 }
 
 // ================= LANGUAGE ACTIVE =================
@@ -312,7 +314,7 @@ function initSmoothScroll() {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === "#") return;
-      
+
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
