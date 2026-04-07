@@ -10,9 +10,9 @@ const translations = {
     //pie
     CertificatUB: "Certificat per la UB",
     col·laboració: "Amb la col·laboració de",
-    recolzament:"Amb el recolzament de",
-    finançament:"Amb el finançament de",
-    footerLinksTitle:"Enllaços ràpids",
+    recolzament: "Amb el recolzament de",
+    finançament: "Amb el finançament de",
+    footerLinksTitle: "Enllaços ràpids",
 
     footerInfoDesc: "Una jornada organitzada per la Coordinadora de la Llengua de Barcelona amb el suport d’entitats compromeses amb l’acollida lingüística i la inclusió.",
 
@@ -407,8 +407,8 @@ const translations = {
     col·laboració: "Con la colaboración de",
     recolzament: "Con el apoyo de",
     finançament: "Con la financiación de",
-    footerLinksTitle:"Enlaces rápidos",
-    footerInfoDesc:"Una jornada organizada por la Coordinadora de la Lengua de Barcelona con el apoyo de entidades comprometidas con la acogida sociolingüística y la inclusión.",
+    footerLinksTitle: "Enlaces rápidos",
+    footerInfoDesc: "Una jornada organizada por la Coordinadora de la Lengua de Barcelona con el apoyo de entidades comprometidas con la acogida sociolingüística y la inclusión.",
 
     // Index & General
     titlePage: "I Jornada de Acogida Sociolingüística | 8 de mayo 2026 · Barcelona",
@@ -739,8 +739,8 @@ const translations = {
 
 
     // Qui som? - Página completa (español)
-    quisomHeroPage:"¿Quiénes somos? - I Jornada de Acogida Sociolingüística" ,
-    quisomHeroTitle: "¿Quiénes somos? " ,
+    quisomHeroPage: "¿Quiénes somos? - I Jornada de Acogida Sociolingüística",
+    quisomHeroTitle: "¿Quiénes somos? ",
     quisomHeroSubtitle: "Descubre las entidades que hacen posible la I Jornada de Acogida Sociolingüística",
 
     quisomAcofTitle: "ACOF",
@@ -785,12 +785,12 @@ const translations = {
     navContact: "CONTACT",
 
     // Pie
-    CertificatUB: "Certified by UB" ,
+    CertificatUB: "Certified by UB",
     col·laboració: "With the collaboration of",
     recolzament: "With the support of",
     finançament: "With funding from",
-    footerLinksTitle:"Quick links",
-    footerInfoDesc:"A conference organized by the Barcelona Language Coordination with the support of organizations committed to sociolinguistic reception and inclusion.",
+    footerLinksTitle: "Quick links",
+    footerInfoDesc: "A conference organized by the Barcelona Language Coordination with the support of organizations committed to sociolinguistic reception and inclusion.",
 
 
     titlePage: "1st Sociolinguistic Welcome Conference | May 8, 2026 · Barcelona",
@@ -973,7 +973,7 @@ const translations = {
 `,
     // COFFEE AND BREAK
     content4: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-mug-hot text-3xl text-purple-700'></i><p>This space provides a break with snacks to share, meet, and exchange experiences among agents, professionals, and organizations involved in sociolinguistic reception. Additionally, it features a poster exhibition showcasing the organizations, explaining their mission, and highlighting the work accomplished. An opportunity to strengthen the network, build connections, and discover synergies that enhance cooperation and support practices.</p></div>",
-    
+
     // === ROUND TABLE ===
     taulaRodonaTitle: "Sociolinguistic reception",
     taulaRodonaDesc: "A discussion space with representatives from public administration, organizations, and professionals to reflect on policies, coordination, resources, linguistic rights, and real reception experiences. The conversation will explore challenges, best practices, and opportunities to strengthen the network and improve sociolinguistic inclusion.",
@@ -1171,7 +1171,7 @@ function changeLanguage(lang) {
 
   // 1. Traducir por DATA-KEY
   // 1. Traducir por DATA-KEY
-document.querySelectorAll('[data-key]').forEach(el => {
+  document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
     if (!t[key]) return;
 
@@ -1179,11 +1179,11 @@ document.querySelectorAll('[data-key]').forEach(el => {
     const htmlKeys = ['quisom', 'content', 'taula', 'comunicacions', 'contacteItem', 'contacteNotaFinal'];
 
     if (htmlKeys.some(prefix => key.includes(prefix))) {
-        el.innerHTML = t[key];        // ← Renderiza como HTML
+      el.innerHTML = t[key];        // ← Renderiza como HTML
     } else {
-        el.innerText = t[key];        // ← Renderiza como texto normal
-    } 
-});
+      el.innerText = t[key];        // ← Renderiza como texto normal
+    }
+  });
 
   // 2. Traducir por ID
   const translateById = (id, key, isHtml = false) => {
@@ -1269,20 +1269,22 @@ function showDetail(index) {
 function renderWorkshops(t) {
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
-  // Cabecera con degradado y descripción general
   let html = `
-    <div class="space-y-12">
-        <div class="relative overflow-hidden bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-10 rounded-3xl shadow-2xl">
+    <div class="space-y-10 sm:space-y-12">
+
+        <!-- CABECERA -->
+        <div class="relative overflow-hidden bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-2xl">
             <div class="relative z-10">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-info"></i> ${t.workshopTitle} 
+                <h3 class="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info"></i> ${t.workshopTitle}
                 </h3>
-                <p class="text-purple-100 leading-relaxed max-w-4xl text-lg">${t.workshopIntro}</p>
+                <p class="text-purple-100 leading-relaxed max-w-4xl text-base sm:text-lg">
+                    ${t.workshopIntro}
+                </p>
             </div>
-            <i class="fa-solid fa-lightbulb absolute -right-8 -bottom-8 text-9xl text-white/10 rotate-12"></i>
         </div>
-        
-        <div class="grid gap-16">`;
+
+        <div class="grid gap-10 sm:gap-14 lg:gap-16">`;
 
   letters.forEach(letter => {
     const title = t['taller' + letter + '_Title'];
@@ -1293,75 +1295,80 @@ function renderWorkshops(t) {
     const imgHtml = t['imgPrograma' + letter] || "";
 
     html += `
-            <section class="group relative bg-white rounded-[2rem] border border-gray-200 shadow-sm  overflow-hidden">
-                <div class="p-8 lg:p-12">
-                    <div class="flex flex-col lg:flex-row gap-12">
-                        
-                        <div class="flex-[1.5]">
-                            <div class="flex flex-wrap items-center gap-4 mb-6">
-                                <span class="bg-purple-100 text-purple-700 text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
-                                    ${letter}
-                                </span>
-                                <span class="flex items-center gap-2 text-gray-500 text-sm font-medium">
-                                    <i class="fa-solid fa-users text-purple-400"></i> ${target}
-                                </span>
-                            </div>
-                            
-                            <h4 class="text-3xl font-black text-gray-900 mb-6 leading-tight ">
-                                ${title}
-                            </h4>
-                            
-                            <div class="prose prose-lg text-gray-600 leading-relaxed text-justify">
-                                ${desc}
-                            </div>
-                        </div>
+      <section class="bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden">
+        <div class="p-5 sm:p-8 lg:p-12">
+          <div class="flex flex-col lg:flex-row gap-6 sm:gap-10 lg:gap-12">
 
-                        <div class="flex-1">
-                            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 h-full">
-                                <div class="flex flex-col items-center text-center mb-6">
-                                    <div class="flex gap-7 workshop-avatar mb-4">
-                                        ${imgHtml}
-                                    </div>
-                                    <h5 class="text-xl font-bold text-gray-900">${name}</h5>
-                                    <span class="text-purple-600 font-semibold text-sm uppercase tracking-widest mt-1">${t.talleristaLabel}</span>
-                                </div>
-                                
-                                <div class="relative"> 
-                                  <i class="fa-solid fa-quote-left text-purple-200 absolute -left-2 -top-2 text-2xl"></i> 
-                                  <p id="bio-${letter}" class="bio-text text-gray-600 text-sm italic leading-relaxed pl-4 line-clamp-4"> ${bio} </p> 
-                                  <button onclick="toggleBio('${letter}', this)" class="mt-3 text-purple-700 font-semibold text-sm hover:underline"> 
-                                    <i class="fa-solid fa-chevron-down text-xl"></i> 
-                                  </button> 
-                                </div>
-                            </div>
-                        </div>
+            <!-- TEXTO -->
+            <div class="flex-[1.5]">
+              <div class="flex flex-wrap items-center gap-3 mb-5">
+                <span class="bg-purple-100 text-purple-700 text-xs sm:text-sm font-bold px-3 py-1 rounded-full uppercase">
+                  ${letter}
+                </span>
+                <span class="flex items-center gap-2 text-gray-500 text-xs sm:text-sm font-medium">
+                  <i class="fa-solid fa-users text-purple-400"></i> ${target}
+                </span>
+              </div>
 
-                    </div>
+              <h4 class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 mb-4 sm:mb-6">
+                ${title}
+              </h4>
+
+              <div class="prose prose-sm sm:prose lg:prose-lg text-gray-600 text-justify">
+                ${desc}
+              </div>
+            </div>
+
+            <!-- PONENTE -->
+            <div class="flex-1">
+              <div class="bg-gray-50 rounded-2xl p-5 sm:p-8 border border-gray-100 h-full">
+
+                <div class="flex flex-col items-center text-center mb-6">
+
+                  <div class="flex flex-wrap justify-center gap-3 mb-4">
+                    ${imgHtml}
+                  </div>
+
+                  <h5 class="text-lg sm:text-xl font-bold text-gray-900">${name}</h5>
+                  <span class="text-purple-600 font-semibold text-xs sm:text-sm uppercase mt-1">
+                    ${t.talleristaLabel}
+                  </span>
                 </div>
-            </section>
-        `;
+
+                <div class="relative"> 
+               <i class="fa-solid fa-quote-left text-purple-200 absolute -left-2 -top-2 text-2xl"></i> 
+               <p id="bio-${letter}" class="bio-text text-gray-600 text-sm italic leading-relaxed pl-4 line-clamp-4"> ${bio} </p> 
+               <button onclick="toggleBio('${letter}', this)" class="mt-3 text-purple-700 font-semibold text-sm hover:underline"> 
+               <i class="fa-solid fa-chevron-down text-xl"></i> </button> </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    `;
   });
 
   html += `</div></div>`;
   return html;
 }
 
+
+// ---------------- COMUNICACIÓN ----------------
+
 function rendercomunicacion(t) {
   const comLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
   let html = `
-    <!-- Cabecera Comunicacions -->
-    <div class="relative overflow-hidden bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-10 rounded-3xl shadow-2xl mb-12">
-        <div class="relative z-10">
-            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-microphone"></i> ${t.comunicacionsTitle} 
-            </h3>
-            <p class="text-purple-100 leading-relaxed max-w-4xl text-lg">${t.comunicacionsIntro}</p>
-        </div>
-        <i class="fa-solid fa-keyboard absolute -right-8 -bottom-8 text-9xl text-white/10 rotate-12"></i>
+    <div class="relative overflow-hidden bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-2xl mb-10 sm:mb-12">
+      <h3 class="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-microphone"></i> ${t.comunicacionsTitle}
+      </h3>
+      <p class="text-purple-100 text-base sm:text-lg">
+        ${t.comunicacionsIntro}
+      </p>
     </div>
 
-    <div class="grid gap-16">`;
+    <div class="grid gap-10 sm:gap-14 lg:gap-16">`;
 
   comLetters.forEach(letter => {
     const title = t['com' + letter + '_Title'];
@@ -1372,40 +1379,51 @@ function rendercomunicacion(t) {
     const cimgHtml = t['imgComuni' + letter] || "";
 
     html += `
-      <section class="group relative bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden">
-        <div class="p-8 lg:p-12">
-          <div class="flex flex-col lg:flex-row gap-12">
-            
+      <section class="bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden">
+        <div class="p-5 sm:p-8 lg:p-12">
+          <div class="flex flex-col lg:flex-row gap-6 sm:gap-10 lg:gap-12">
+
             <div class="flex-[1.5]">
-              <div class="flex flex-wrap items-center gap-4 mb-6">
-                <span class="bg-purple-100 text-purple-700 text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">${letter}</span>
-                <span class="flex items-center gap-2 text-gray-500 text-sm font-medium">
+              <div class="flex flex-wrap items-center gap-3 mb-5">
+                <span class="bg-purple-100 text-purple-700 text-xs sm:text-sm font-bold px-3 py-1 rounded-full">
+                  ${letter}
+                </span>
+                <span class="flex items-center gap-2 text-gray-500 text-xs sm:text-sm">
                   <i class="fa-solid fa-users text-purple-400"></i> ${target}
                 </span>
               </div>
 
-              <h4 class="text-3xl font-black text-gray-900 mb-6 leading-tight ">
+              <h4 class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 mb-4 sm:mb-6">
                 ${title}
               </h4>
 
-              <div class="prose prose-lg text-gray-600 leading-relaxed text-justify">
+              <div class="prose prose-sm sm:prose lg:prose-lg text-gray-600 text-justify">
                 ${desc}
               </div>
             </div>
 
             <div class="flex-1">
-              <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 h-full">
-                
+              <div class="bg-gray-50 rounded-2xl p-5 sm:p-8 border border-gray-100 h-full">
+
                 <div class="flex flex-col items-center text-center mb-6">
-                  <div class="flex gap-7 workshop-avatar mb-4">
+
+                  <div class="flex flex-wrap justify-center gap-3 mb-4">
                     ${cimgHtml}
                   </div>
 
-                  <h5 class="text-xl font-bold text-gray-900">${cname}</h5>
-                  <span class="text-purple-600 font-semibold text-sm uppercase tracking-widest mt-1">${t.comlavel}</span>
+                  <h5 class="text-lg sm:text-xl font-bold">${cname}</h5>
+                  <span class="text-purple-600 text-xs sm:text-sm uppercase mt-1">
+                    ${t.comlavel}
+                  </span>
                 </div>
-                
-               <div class="relative"> <i class="fa-solid fa-quote-left text-purple-200 absolute -left-2 -top-2 text-2xl"></i> <p id="bio-${letter}" class="bio-text text-gray-600 text-sm italic leading-relaxed pl-4 line-clamp-4"> ${bio} </p> <button onclick="toggleBio('${letter}', this)" class="mt-3 text-purple-700 font-semibold text-sm hover:underline"> <i class="fa-solid fa-chevron-down text-xl"></i> </button> </div>
+
+                <div class="relative"> 
+                    <i class="fa-solid fa-quote-left text-purple-200 absolute -left-2 -top-2 text-2xl"></i> 
+                    <p id="bio-${letter}" class="bio-text text-gray-600 text-sm italic leading-relaxed pl-4 line-clamp-4"> ${bio} </p> 
+                    <button onclick="toggleBio('${letter}', this)" class="mt-3 text-purple-700 font-semibold text-sm hover:underline"> 
+                      <i class="fa-solid fa-chevron-down text-xl"></i>
+                    </button> 
+                 </div>
 
               </div>
             </div>
@@ -1418,78 +1436,51 @@ function rendercomunicacion(t) {
   html += `</div>`;
   return html;
 }
-// Función específica para renderizar la Taula Rodona (diseño simple como en la imagen)
+
+
+// ---------------- TAULA RODONA ----------------
+
 function renderTaulaRodona(t) {
   return `
-    <div class="space-y-12">
+    <div class="space-y-10 sm:space-y-12">
 
-        <!-- Cabecera -->
-        <div class="relative overflow-hidden bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-12 rounded-3xl shadow-2xl">
-            <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
-                    <i class="fa-solid fa-users text-3xl"></i>
-                    <h3 class="text-xl font-bold">${t.taulaRodonaTitle}</h3>
-                </div>
-                <p class="text-purple-100 leading-relaxed text-lg">${t.taulaRodonaDesc}</p>
-            </div>
-            <i class="fa-solid fa-comment-dots absolute -right-8 -bottom-8 text-9xl text-white/10"></i>
-        </div>
+      <div class="bg-gradient-to-br from-purple-800 to-indigo-900 text-white p-6 sm:p-8 lg:p-10 rounded-3xl shadow-2xl">
+        <h3 class="text-lg sm:text-xl font-bold mb-3">${t.taulaRodonaTitle}</h3>
+        <p class="text-purple-100 text-base sm:text-lg">${t.taulaRodonaDesc}</p>
+      </div>
 
-        <!-- Participantes - Diseño vertical -->
-        <div class="space-y-10">
+      <div class="space-y-8 sm:space-y-10">
 
-            <!-- Ponente 1: Marina Massaguer -->
-            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                <div class="p-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
-                    <img src="img/Marina Massaguer.jpg" 
-                         class="w-36 h-36 flex-shrink-0 rounded-full object-cover border-8 border-white shadow-lg" 
-                         alt="Marina Massaguer">
-                    <div class="text-center md:text-left flex-1">
-                        <h4 class="text-2xl font-bold text-gray-900 mb-1">${t.taulaMarinaName}</h4>
-                        <p class="text-purple-600 font-medium text-sm tracking-widest uppercase mb-5">${t.taulaRodonaPonentLabel}</p>
-                        <div class="prose prose-gray text-gray-600 leading-relaxed">
-                            ${t.taulaMarinaBio}
-                        </div>
-                    </div>
-                </div>
-            </div>
+        ${createPonente("Marina Massaguer.jpg", t.taulaMarinaName, t.taulaMarinaBio, t)}
+        ${createPonente("Pere Cortada.png", t.taulaPereName, t.taulaPereBio, t)}
+        ${createPonente("Ester Rams.png", t.taulaEsterName, t.taulaEsterBio, t)}
 
-            <!-- Ponente 2: Pere Cortada -->
-            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-                <div class="p-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
-                    <img src="img/Pere Cortada.png" 
-                         class="w-36 h-36 flex-shrink-0 rounded-full object-cover border-8 border-white shadow-lg" 
-                         alt="Pere Cortada i Hortalà">
-                    <div class="text-center md:text-left flex-1">
-                        <h4 class="text-2xl font-bold text-gray-900 mb-1">${t.taulaPereName}</h4>
-                        <p class="text-purple-600 font-medium text-sm tracking-widest uppercase mb-5">${t.taulaRodonaPonentLabel}</p>
-                        <div class="prose prose-gray text-gray-600 leading-relaxed">
-                            ${t.taulaPereBio}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ponente 3: (Añade aquí el tercer ponente) -->
-            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm  overflow-hidden">
-                <div class="p-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
-                    <img src="img/Ester Rams.png" 
-                         class="w-36 h-36 flex-shrink-0 rounded-full object-cover border-8 border-white shadow-lg" 
-                         alt="Tercer Ponente">
-                    <div class="text-center md:text-left flex-1">
-                        <h4 class="text-2xl font-bold text-gray-900 mb-1" data-key="taulaTercerName">${t.taulaEsterName}</h4>
-                        <p class="text-purple-600 font-medium text-sm tracking-widest uppercase mb-5">${t.taulaRodonaPonentLabel}</p>
-                        <div class="prose prose-gray text-gray-600 leading-relaxed" data-key="taulaTercerBio">
-                            ${t.taulaEsterBio}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+      </div>
     </div>
   `;
 }
+
+
+// helper
+function createPonente(img, name, bio, t) {
+  return `
+    <div class="bg-white rounded-3xl border shadow-sm p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row gap-6 sm:gap-8 items-center">
+
+      <img src="img/${img}"
+        class="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full object-cover shadow-lg"
+      >
+
+      <div class="text-center md:text-left">
+        <h4 class="text-lg sm:text-xl lg:text-2xl font-bold">${name}</h4>
+        <p class="text-purple-600 text-xs sm:text-sm uppercase mb-3">${t.taulaRodonaPonentLabel}</p>
+        <p class="text-gray-600 text-sm sm:text-base">${bio}</p>
+      </div>
+
+    </div>
+  `;
+}
+
+
 function updateActiveButton(lang) {
   // 1. Quitamos la clase 'active' de todos los botones de idioma
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1510,9 +1501,9 @@ function toggleBio(letter, btn) {
   if (bio.classList.contains('expanded')) {
     // 🔽 COLAPSAR
     bio.style.maxHeight = bio.scrollHeight + "px"; // fijamos altura actual
-    
+
     requestAnimationFrame(() => {
-      bio.style.maxHeight = "4.5em"; // vuelve a 3 líneas
+      bio.style.maxHeight = "6.5em"; // vuelve a 3 líneas
     });
 
     bio.classList.remove('expanded');
@@ -1530,62 +1521,33 @@ function toggleBio(letter, btn) {
 function checkBioOverflow(letter) {
 
   const bio = document.getElementById(`bio-${letter}`);
-
   const btn = document.getElementById(`btn-${letter}`);
 
-
-
   if (!bio || !btn) return;
-
-
-
   // Clon para medir altura real sin clamp
-
   const clone = bio.cloneNode(true);
-
   clone.style.webkitLineClamp = 'unset';
-
   clone.style.display = 'block';
-
   clone.style.visibility = 'hidden';
-
   clone.style.position = 'absolute';
-
-
-
   document.body.appendChild(clone);
-
-
-
   const fullHeight = clone.scrollHeight;
-
   const visibleHeight = bio.clientHeight;
-
-
-
   document.body.removeChild(clone);
 
-
-
   if (fullHeight > visibleHeight + 5) {
-
     btn.classList.remove('hidden');
-
   } else {
-
     btn.classList.add('hidden');
-
   }
-
 }
+
 setTimeout(() => {
 
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
   letters.forEach(letter => {
-
     checkBioOverflow(letter);
-
   });
 
 }, 0);
@@ -1593,3 +1555,6 @@ setTimeout(() => {
 document.addEventListener('DOMContentLoaded', () => {
   changeLanguage(currentLang);
 });
+
+
+
