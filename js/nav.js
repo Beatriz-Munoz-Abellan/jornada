@@ -1,12 +1,45 @@
 // ====================== NAV.JS ======================
+
 // ================= CONFIG =================
-const BASE_PATH = ''
+// ================= CONFIG =================
+let BASE_PATH = '/';   // valor por defecto
+
+function detectBasePath() {
+  const path = window.location.pathname;
+
+  // Si estamos en la raíz o en GitHub Pages con nombre de repositorio
+  if (path === '/' || path === '/index.html') {
+    BASE_PATH = '/';
+    return;
+  }
+
+  const parts = path.split('/').filter(p => p !== '');
+  
+  if (parts.length > 0) {
+    const possibleRepo = parts[0];
+      if (path.startsWith('/' + possibleRepo + '/')) {
+      BASE_PATH = '/' + possibleRepo + '/';
+    } else {
+      BASE_PATH = '/';
+    }
+  } else {
+    BASE_PATH = '/';
+  }
+}
 
 function loadNav() {
+  detectBasePath();   // ← Nueva función importante
+
   const navContainer = document.getElementById('main-nav');
   if (!navContainer) return;
 
-  const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
+  // Mejor detección de página de inicio
+  const currentPath = window.location.pathname.toLowerCase();
+  const isHome = currentPath === '/' || 
+                 currentPath.endsWith('/index.html') || 
+                 currentPath === BASE_PATH || 
+                 currentPath === BASE_PATH + 'index.html';
+
   // 🔹 Items del programa (dinámico)
   const programItems = [
     { time: "8:30", key: "card0_Title" },
@@ -17,7 +50,6 @@ function loadNav() {
     { time: "13:45", key: "card5_Title" },
     { time: "14:30", key: "card6_Title" },
     { time: "14:30", key: "card7_Title" }
-
   ];
 
   const dropdownHTML = programItems.map((item, i) => `
@@ -39,8 +71,8 @@ function loadNav() {
         <div class="flex justify-between items-center">
 
           <!-- LOGO -->
-            <a href="${BASE_PATH}index.html">
-            <img src="img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
+          <a href="${BASE_PATH}index.html">
+            <img src="${BASE_PATH}img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
           </a>
 
           <!-- HAMBURGUESA -->
@@ -49,11 +81,9 @@ function loadNav() {
           </button>
 
           <!-- MENÚ -->
-          <nav id="main-menu" class="menu flex  gap-8 md:gap-10 font-medium ${textColor}">
-            
-            <a href="index.html" class="nav-link" data-key="navHome"></a>
-
-            <a href="nosotros.html" class="nav-link" data-key="navAbout"></a>
+          <nav id="main-menu" class="menu flex gap-8 md:gap-10 font-medium ${textColor}">
+            <a href="${BASE_PATH}index.html" class="nav-link" data-key="navHome"></a>
+            <a href="${BASE_PATH}nosotros.html" class="nav-link" data-key="navAbout"></a>
 
             <div class="relative dropdown">
               <button id="program-btn" class="nav-link flex items-center gap-1">
@@ -66,9 +96,8 @@ function loadNav() {
               </div>
             </div>
 
-            <a href="inscripcion.html" class="nav-link" data-key="navRegister"></a>
-            <a href="contacto.html" class="nav-link" data-key="navContact"></a>
-
+            <a href="${BASE_PATH}inscripcion.html" class="nav-link" data-key="navRegister"></a>
+            <a href="${BASE_PATH}contacto.html" class="nav-link" data-key="navContact"></a>
           </nav>
 
           <!-- IDIOMAS -->
@@ -88,36 +117,46 @@ function loadNav() {
   updateActiveLanguage(currentLang);
   setActiveNavLink();
 }
+
+
 function setActiveNavLink() {
-  const currentPath = window.location.pathname;
-
+  const currentPath = window.location.pathname.toLowerCase();
+  
+  // Quitar "active" a todos los enlaces primero
   document.querySelectorAll('.nav-link').forEach(link => {
-    const linkPath = link.getAttribute('href');
+    link.classList.remove('active');
+  });
 
-    if (!linkPath) return;
+  // === Links normales ===
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const cleanHref = href.toLowerCase().replace(BASE_PATH, '');
 
-    // Normalizamos casos como "/" y "/index.html"
-    const isHomeLink = linkPath === '/index.html' || linkPath === '/';
-    const isHomeCurrent = currentPath === '/' || currentPath.includes('index.html');
-
-    if (
-      (isHomeLink && isHomeCurrent) ||
-      (!isHomeLink && currentPath.includes(linkPath))
-    ) {
+    if (cleanHref === 'index.html' || cleanHref === '') {
+      if (currentPath === '/' || 
+          currentPath.endsWith('/index.html') || 
+          currentPath === BASE_PATH) {
+        link.classList.add('active');
+      }
+    } 
+    else if (currentPath.includes(cleanHref)) {
       link.classList.add('active');
-    } else {
-      link.classList.remove('active');
     }
   });
 
-  // Caso especial: programa
-  if (currentPath.includes('programa.html')) {
-    const programBtn = document.getElementById('program-btn');
-    if (programBtn) {
+  // === Caso especial: Programa ===
+  const programBtn = document.getElementById('program-btn');
+  if (programBtn) {
+    const isProgramPage = currentPath.includes('programa.html');
+    
+    if (isProgramPage) {
       programBtn.classList.add('active');
+    } else {
+      programBtn.classList.remove('active');
     }
   }
 }
+setTimeout(setActiveNavLink, 100);
 // ================= NAV EVENTS =================
 
 function initNavEvents() {
