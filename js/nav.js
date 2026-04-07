@@ -106,61 +106,158 @@ function loadNav() {
   setActiveNavLink();
 }
 
-// ================= ACTIVE NAV LINK =================
 function setActiveNavLink() {
   const currentPath = window.location.pathname.toLowerCase();
-
-  // Quitar active a todos
+  
+  // Quitar "active" a todos los enlaces primero
   document.querySelectorAll('.nav-link').forEach(link => {
     link.classList.remove('active');
   });
 
-  // Links normales
+  // === Links normales ===
   document.querySelectorAll('.nav-link').forEach(link => {
-    let href = (link.getAttribute('href') || '').toLowerCase();
-    href = href.replace(BASE_PATH, '');
+    const href = link.getAttribute('href') || '';
+    const cleanHref = href.toLowerCase().replace(BASE_PATH, '');
 
-    if (href === 'index.html' || href === '') {
-      if (currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === BASE_PATH) {
+    if (cleanHref === 'index.html' || cleanHref === '') {
+      if (currentPath === '/' || 
+          currentPath.endsWith('/index.html') || 
+          currentPath === BASE_PATH) {
         link.classList.add('active');
       }
-    } else if (currentPath.includes(href)) {
+    } 
+    else if (currentPath.includes(cleanHref)) {
       link.classList.add('active');
     }
   });
 
-  // Programa (solo activo en programa.html)
+  // === Caso especial: Programa ===
   const programBtn = document.getElementById('program-btn');
   if (programBtn) {
-    if (currentPath.includes('programa.html')) {
+    const isProgramPage = currentPath.includes('programa.html');
+    
+    if (isProgramPage) {
       programBtn.classList.add('active');
     } else {
       programBtn.classList.remove('active');
     }
   }
 }
+setTimeout(setActiveNavLink, 100);
+// ================= NAV EVENTS =================
 
-// ================= Otras funciones (mantener las tuyas) =================
 function initNavEvents() {
-  // ... tu código actual de initNavEvents ...
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('main-menu');
   const icon = menuToggle ? menuToggle.querySelector('i') : null;
 
-  if (menuToggle && menu && icon) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('open');
-      icon.classList.toggle('fa-bars', !isOpen);
-      icon.classList.toggle('fa-times', isOpen);
-    });
+  if (!menuToggle || !menu || !icon) return;
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+
+    if (isOpen) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  const programBtn = document.getElementById('program-btn');
+  if (programBtn) {
+    programBtn.addEventListener('click', toggleDropdown);
   }
 
-  document.getElementById('program-btn')?.addEventListener('click', toggleDropdown);
+  document.getElementById('btn-ca')?.addEventListener('click', () => {
+    changeLanguage('ca');
+    updateActiveLanguage('ca');
+  });
 
-  // Botones de idioma (mantener los tuyos)
-  document.getElementById('btn-ca')?.addEventListener('click', () => { changeLanguage('ca'); updateActiveLanguage('ca'); });
-  document.getElementById('btn-es')?.addEventListener('click', () => { changeLanguage('es'); updateActiveLanguage('es'); });
-  document.getElementById('btn-en')?.addEventListener('click', () => { changeLanguage('en'); updateActiveLanguage('en'); });
+  document.getElementById('btn-es')?.addEventListener('click', () => {
+    changeLanguage('es');
+    updateActiveLanguage('es');
+  });
+
+  document.getElementById('btn-en')?.addEventListener('click', () => {
+    changeLanguage('en');
+    updateActiveLanguage('en');
+  });
+}
+
+// ================= SCROLL EFFECT =================
+
+function initScrollEffect() {
+  const header = document.getElementById('main-header');
+  if (!header) return;
+
+  let ticking = false;
+
+  function updateHeader() {
+    const scrollY = window.scrollY;
+    const isHome = window.location.pathname === '/' || window.location.pathname.includes('index.html');
+
+    if (isHome) {
+      if (scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    } else {
+      if (scrollY > 100) {
+        header.classList.add('fixed', 'shadow-md');
+        header.classList.remove('relative');
+      } else {
+        header.classList.remove('fixed', 'shadow-md');
+        header.classList.add('relative');
+      }
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  });
+}
+
+// ================= DROPDOWN =================
+
+let dropdownOpen = false;
+
+function toggleDropdown() {
+  const menu = document.getElementById('dropdown-menu');
+  const chevron = document.getElementById('chevron');
+
+  if (!menu || !chevron) return;
+
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    menu.classList.toggle('show');
+
+    chevron.style.transform =
+      menu.classList.contains('show')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+  } else {
+    dropdownOpen = !dropdownOpen;
+
+    if (dropdownOpen) {
+      menu.classList.remove('hidden');
+      menu.offsetHeight;
+      menu.classList.add('show');
+      chevron.style.transform = 'rotate(180deg)';
+    } else {
+      menu.classList.remove('show');
+      chevron.style.transform = 'rotate(0deg)';
+      setTimeout(() => menu.classList.add('hidden'), 250);
+    }
+  }
 }
 
 function goToProgram(index) {
@@ -176,7 +273,89 @@ function goToProgram(index) {
   window.location.href = `${BASE_PATH}programa.html?item=${index}`;
 }
 
+// ================= LANGUAGE ACTIVE =================
+
+function updateActiveLanguage(lang) {
+  const buttons = ["ca", "es", "en"];
+
+  buttons.forEach(code => {
+    const btn = document.getElementById(`btn-${code}`);
+    if (!btn) return;
+
+    btn.classList.toggle("active", code === lang);
+  });
+}
+
+// ================= CARRUSEL =================
+
+function initCarousel() {
+  const carousel = document.getElementById('program-carousel');
+  if (!carousel) return;
+
+  const btnLeft = document.getElementById('btn-left');
+  const btnRight = document.getElementById('btn-right');
+
+  const scrollAmount = 320;
+
+  function scrollCarousel(direction) {
+    carousel.scrollBy({
+      left: scrollAmount * direction,
+      behavior: 'smooth'
+    });
+  }
+
+  function updateArrows() {
+    const scrollLeft = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    if (btnLeft) {
+      btnLeft.style.opacity = scrollLeft < 30 ? '0.4' : '1';
+      btnLeft.style.pointerEvents = scrollLeft < 30 ? 'none' : 'auto';
+    }
+
+    if (btnRight) {
+      btnRight.style.opacity = scrollLeft > maxScroll - 30 ? '0.4' : '1';
+      btnRight.style.pointerEvents = scrollLeft > maxScroll - 30 ? 'none' : 'auto';
+    }
+  }
+
+  btnLeft?.addEventListener('click', () => scrollCarousel(-1));
+  btnRight?.addEventListener('click', () => scrollCarousel(1));
+  carousel.addEventListener('scroll', updateArrows);
+
+  window.addEventListener('load', () => {
+    showDetail(0);
+    updateArrows();
+  });
+}
+
+// ================= SMOOTH SCROLL =================
+
+// ... (tus funciones loadNav, initNavEvents, etc., se mantienen igual)
+
+// 1. Encapsula el Smooth Scroll
+function initSmoothScroll() {
+  // Ahora buscamos los enlaces DESPUÉS de que el Nav se ha cargado
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+
 // ================= INIT =================
+
 document.addEventListener('DOMContentLoaded', () => {
   loadNav();
   initScrollEffect();
@@ -184,6 +363,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
 });
 
-// Exponer funciones globales
+// ================= GLOBAL =================
+
 window.toggleDropdown = toggleDropdown;
 window.goToProgram = goToProgram;
+
+
