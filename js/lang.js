@@ -13,8 +13,13 @@ const translations = {
     recolzament: "Amb el recolzament de",
     finançament: "Amb el finançament de",
     footerLinksTitle: "Enllaços ràpids",
-
     footerInfoDesc: "Una jornada organitzada per la Coordinadora de la Llengua de Barcelona amb el suport d’entitats compromeses amb l’acollida lingüística i la inclusió.",
+    pieCredi:"© 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats",
+
+    // Cookies
+    cookieText:"Utilitzem galetes pròpies i de tercers per millorar la teva experiència, analitzar el trànsit i mostrar contingut personalitzat Pots consultar la nostra <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>",
+    cookieReject:"Rebutjar",
+    cookieAccept:"Acceptar",
 
     // Index & General
     titlePage: "I Jornada d’Acollida Sociolingüística | 8 de maig 2026 · Barcelona",
@@ -409,7 +414,13 @@ const translations = {
     finançament: "Con la financiación de",
     footerLinksTitle: "Enlaces rápidos",
     footerInfoDesc: "Una jornada organizada por la Coordinadora de la Lengua de Barcelona con el apoyo de entidades comprometidas con la acogida sociolingüística y la inclusión.",
+    pieCredi:"© 2026 I Jornada de Acogida Sociolingüística · Todos los derechos reservados",
 
+     // Cookies
+    cookieText:" Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el tráfico y mostrar contenido personalizado. Puedes consultar nuestra <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>",
+    cookieReject:"Rechazar",
+    cookieAccept:"Aceptar",
+    
     // Index & General
     titlePage: "I Jornada de Acogida Sociolingüística | 8 de mayo 2026 · Barcelona",
     heroTitle: "I Jornada de Acogida Sociolingüística",
@@ -775,7 +786,6 @@ const translations = {
     quisomMotorClosing: "Este grupo ha trabajado colaborativamente en la conceptualización y organización, manteniendo un diálogo continuado con la <span class=\"font-bold text-white\">Coordinadora de la Lengua</span> para reforzar el carácter colectivo de la jornada."
 
   },
-
   en: {
     // EN
     navHome: "HOME",
@@ -791,7 +801,12 @@ const translations = {
     finançament: "With funding from",
     footerLinksTitle: "Quick links",
     footerInfoDesc: "A conference organized by the Barcelona Language Coordination with the support of organizations committed to sociolinguistic reception and inclusion.",
-
+    pieCredi:"© 2026 1st Sociolinguistic Welcome Day · All rights reserved",
+    
+    // Cookies
+    cookieText:"We use our own and third-party cookies to improve your experience, analyze traffic, and show personalized content. You can check our <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Cookies Policy</a>",
+    cookieReject:"Reject",
+    cookieAccept:"Accept",
 
     titlePage: "1st Sociolinguistic Welcome Conference | May 8, 2026 · Barcelona",
     heroTitle: "1st Sociolinguistic Welcome Conference",
@@ -1176,7 +1191,7 @@ function changeLanguage(lang) {
     if (!t[key]) return;
 
     // Lista de claves que deben renderizarse como HTML
-    const htmlKeys = ['quisom', 'content', 'taula', 'comunicacions', 'contacteItem', 'contacteNotaFinal'];
+    const htmlKeys = ['quisom', 'content', 'taula', 'comunicacions', 'contacteItem', 'contacteNotaFinal', 'cookieText'];
 
     if (htmlKeys.some(prefix => key.includes(prefix))) {
       el.innerHTML = t[key];        // ← Renderiza como HTML
@@ -1192,33 +1207,6 @@ function changeLanguage(lang) {
       isHtml ? el.innerHTML = t[key] : el.textContent = t[key];
     }
   };
-
-  translateById("title-page", "titlePage");
-  translateById("hero-title", "heroTitle");
-  translateById("prog-hero-title", "progHeroTitle");
-  translateById("hero-date", "heroDate");
-  translateById("section-quisom-title", "sectionQuisomTitle");
-  translateById("quisom-p1", "quisomP1", true);
-  translateById("quisom-p2", "quisomP2", true);
-  translateById("quisom-p3", "quisomP3", true);
-  translateById("lloc-title", "llocTitle");
-  translateById("lloc-venue", "llocVenue");
-  translateById("lloc-address", "llocAddress");
-  translateById("arribar-title", "arribarTitle");
-  translateById("transport-metro-label", "transportMetroLabel");
-  translateById("transport-metro-text", "transportMetroText");
-  translateById("transport-bus-label", "transportBusLabel");
-  translateById("transport-bus-text", "transportBusText");
-  translateById("transport-tram-label", "transportTramLabel");
-  translateById("transport-tram-text", "transportTramText");
-  translateById("transport-bici-label", "transportBiciLabel");
-  translateById("transport-bici-text", "transportBiciText");
-  translateById("horari-title", "horariTitle");
-  translateById("horari-text", "horariText");
-  translateById("maps-link-text", "mapsLinkText");
-  translateById("inscripcio-titlei", "inscripcioTitlei");
-  translateById("inscripcio-text", "inscripcioText");
-  translateById("inscripcio-btn", "inscripcioBtn");
 
   // 3. Lógica de programa
   const activeCard = document.querySelector('.program-card.active');

@@ -99,11 +99,11 @@ function loadFooter() {
 
           <!-- Columna 1: Info General -->
           <div>
-            <h4 id="hero-title"  class="text-white text-lg font-semibold mb-6" ></h4>
+            <h4  class="text-white text-lg font-semibold mb-6" data-key="heroTitle" ></h4>
             <p class="text-sm leading-relaxed" data-key="footerInfoDesc">
              
             </p>
-            <p id="hero-date" class="text-xs text-gray-500 mt-8">
+            <p  class="text-xs text-gray-500 mt-8" data-key="heroDate">
             </p>
           </div>
 
@@ -143,9 +143,7 @@ function loadFooter() {
               <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
                 <i class="fa-brands fa-facebook"></i>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
+             
               <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
@@ -155,8 +153,8 @@ function loadFooter() {
         </div>
 
         <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-xs text-gray-500">
-          © 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats
+        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-xs text-gray-500" data-key="pieCredi">
+          
         </div>
 
       </div>

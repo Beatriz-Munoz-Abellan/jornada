@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title-page">I Jornada d’Acollida Sociolingüística | 8 de maig 2026 · Barcelona</title>
+  <title data-key="title-page">I Jornada d’Acollida Sociolingüística | 8 de maig 2026 · Barcelona</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -27,27 +27,28 @@
     <div class="absolute top-0 left-0 w-full h-full bg-white/70 z-10"></div>
 
     <div class="relative z-20 text-center px-6">
-      <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-4">
-        
+      <h1 class="text-5xl md:text-6xl font-bold mb-4" data-key="heroTitle">
+
       </h1>
-      <p id="hero-date" class="text-3xl mb-2"></p>
+      <p id="hero-date" class="text-3xl mb-2" data-key="heroDate"></p>
     </div>
 
   </section>
 
   <section id="quisom" class="py-20 bg-gray-100">
+
     <div class="max-w-7xl mx-auto px-6">
-      <h2 id="section-quisom-title" class="text-4xl font-bold text-center mb-12 logo-purple"></h2>
+      <h2 class="text-4xl font-bold text-center mb-12 logo-purple" data-key="sectionQuisomTitle"></h2>
       <div class="mx-auto text-justify text-gray-700 text-lg">
-        <p id="quisom-p1" class="mb-6">
-         
+        <p class="mb-6" data-key="quisomP1">
+
         </p>
-        <p id="quisom-p2" class="mb-6">
-          
+        <p class="mb-6" data-key="quisomP2">
+
         </p>
 
-        <p id="quisom-p3">
-          
+        <p data-key="quisomP3">
+
         </p>
 
       </div>
@@ -57,9 +58,9 @@
   <section id="lloc" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12">
-        <h2 id="lloc-title" class="text-4xl font-bold logo-purple mb-4"></h2>
-        <p id="lloc-venue" class="text-xl text-gray-600"></p>
-        <p id="lloc-address" class="text-lg text-gray-500 mt-2">Avinguda de les Drassanes, 3, 08001 Barcelona</p>
+        <h2 class="text-4xl font-bold logo-purple mb-4" data-key="llocTitle"></h2>
+        <p class="text-xl text-gray-600" data-key="llocVenue"></p>
+        <p class="text-lg text-gray-500 mt-2">Avinguda de les Drassanes, 3, 08001 Barcelona</p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-10 items-center">
@@ -75,27 +76,27 @@
           <div class="bg-gray-50 rounded-2xl p-8">
             <div class="flex items-center gap-4 mb-6">
               <i class="fa-solid fa-location-dot text-4xl text-purple-700"></i>
-              <h3 id="arribar-title" class="text-2xl font-semibold text-gray-800"></h3>
+              <h3 id="arribar-title" class="text-2xl font-semibold text-gray-800" data-key="arribarTitle"></h3>
             </div>
             <ul class="space-y-4 text-gray-700">
               <li id="transport-metro" class="flex gap-3">
-                <span id="transport-metro-label" class="font-medium w-20"></span>
-                <span id="transport-metro-text"></span>
+                <span id="transport-metro-label" class="font-medium w-20" data-key="transportMetroLabel"></span>
+                <span data-key="transportMetroText"></span>
               </li>
 
               <li id="transport-bus" class="flex gap-3">
-                <span id="transport-bus-label" class="font-medium w-20"></span>
-                <span id="transport-bus-text"></span>
+                <span class="font-medium w-20" data-key="transportBusLabel"></span>
+                <span data-key="transportBusText"></span>
               </li>
 
               <li id="transport-tram" class="flex gap-3">
-                <span id="transport-tram-label" class="font-medium w-20"></span>
-                <span id="transport-tram-text"></span>
+                <span class="font-medium w-20" data-key="transportTramLabel"></span>
+                <span data-key="transportTramText"></span>
               </li>
 
               <li id="transport-bici" class="flex gap-3">
-                <span id="transport-bici-label" class="font-medium w-20"></span>
-                <span id="transport-bici-text"></span>
+                <span class="font-medium w-20" data-key="transportBiciLabel"></span>
+                <span data-key="transportBiciText"></span>
               </li>
             </ul>
           </div>
@@ -103,10 +104,10 @@
           <div class="bg-gray-50 rounded-2xl p-8">
             <div class="flex items-center gap-4 mb-6">
               <i class="fa-solid fa-clock text-4xl text-purple-700"></i>
-              <h3 id="horari-title" class="text-2xl font-semibold text-gray-800"></h3>
+              <h3 class="text-2xl font-semibold text-gray-800" data-key="horariTitle"></h3>
             </div>
-            <p id="horari-text" class="text-gray-700 leading-relaxed text-lg">
-              
+            <p class="text-gray-700 leading-relaxed text-lg" data-key="horariText">
+
             </p>
           </div>
 
@@ -115,7 +116,7 @@
             target="_blank"
             class="inline-flex items-center gap-3 bg-purple-700 hover:bg-purple-800 text-white font-medium px-8 py-4 rounded-2xl transition-all">
             <i class="fa-solid fa-directions"></i>
-            <span id="maps-link-text"></span>
+            <span data-key="mapsLinkText"></span>
           </a>
         </div>
       </div>
@@ -124,13 +125,12 @@
 
   <section id="inscripcio" class="py-24 bg-purple-700 text-white">
     <div class="max-w-3xl mx-auto text-center px-6">
-      <h2 id="inscripcio-titlei" class="text-4xl font-bold mb-6"></h2>
-      <p id="inscripcio-text" class="text-xl mb-10"></p>
-      <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeLfJR7t_OKzY3__xq3ahS6AjqP7xPOnlgxLMoymoEn6Y68QA/viewform"
+      <h2 class="text-4xl font-bold mb-6" data-key="inscripcioTitlei"></h2>
+      <p class="text-xl mb-10" data-key="inscripcioText"></p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLfJR7t_OKzY3__xq3ahS6AjqP7xPOnlgxLMoymoEn6Y68QA/viewform"
         target="_blank" rel="noopener noreferrer"
         class="inline-block bg-white text-purple-700 hover:bg-gray-100 font-semibold text-2xl px-16 py-6 rounded-2xl transition shadow-lg">
-        <span id="inscripcio-btn"></span>
+        <span data-key="inscripcioBtn"></span>
         <i class="fa-solid fa-arrow-right text-2xl group-active:translate-x-2 transition-transform"></i>
 
       </a>
@@ -139,10 +139,14 @@
 
   <div id="main-footer"></div>
 
-  <script src="js/nav.js"></script>
+
+  
+  <script src="js/lang.js"></script>
+  <script src="js/nav.js "  ></script>
   <script src="js/footer.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/lang.js"></script>
+  <script src="js/cookis.js"></script>
+
 
 
 </body>

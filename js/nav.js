@@ -24,20 +24,23 @@ function loadNav() {
   const isHome = isHomePage();
 
   const programItems = [
-    { time: "8:30", key: "card0_Title" },
-    { time: "9:00", key: "card1_Title" },
-    { time: "9:30", key: "card2_Title" },
-    { time: "10:30", key: "card3_Title" },
-    { time: "11:30", key: "card4_Title" },
-    { time: "13:45", key: "card5_Title" },
-    { time: "14:30", key: "card6_Title" },
-    { time: "14:30", key: "card7_Title" }
+    { time: "8:30 - 9:15", key: "card0_Title" },
+    { time: "9:30 - 9:45", key: "card1_Title" },
+    { time: "9:45 - 10:15", key: "card2_Title" },
+    { time: "10:30 - 11:30", key: "card3_Title" },
+    { time: "11:30 - 12:15", key: "card4_Title" },
+    { time: "12:30 - 13:30", key: "card5_Title" },
+    { time: "13:45 - 14:30", key: "card6_Title" },
+    { time: "14:30 - 14:45", key: "card7_Title" }
   ];
 
   const dropdownHTML = programItems.map((item, i) => `
-    <div onclick="goToProgram(${i})" class="dropdown-item cursor-pointer">
-      <span class="dropdown-time">${item.time}</span>
-      <span data-key="${item.key}"></span>
+    <div onclick="goToProgram(${i})" class="dropdown-item flex items-center gap-3 px-4 py-3 cursor-pointer  hover:bg-gray-100 transition-all">
+      <i class="fa-solid fa-clock text-purple-600 text-sm"></i>
+      <span class="dropdown-time text-sm font-medium text-gray-700 min-w-[80px]">
+        ${item.time}
+      </span>
+      <span data-key="${item.key}" class="text-gray-800 text-sm"></span>
     </div>
   `).join('');
 
