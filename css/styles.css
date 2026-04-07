@@ -1,0 +1,480 @@
+/* ================= NAV - INICIO (Home) ================= */
+.home-nav {
+  background: transparent;
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, box-shadow;
+}
+
+.home-nav.scrolled {
+  background: white;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+.home-nav a,
+.home-nav button {
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.home-nav a:hover {
+  color: #ad73ec;
+}
+
+.home-nav.scrolled a:hover {
+  color: #8B008B;
+}
+
+/* Logo */
+.nav-logo {
+  height: 76px;
+  margin-top: 40px;
+  transform: scale(1.8);
+  transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.home-nav.scrolled .nav-logo {
+  margin-top: 0;
+  transform: scale(1);
+  height: 5rem;
+}
+
+/* ================= LANG BUTTONS ================= */
+.lang-btn {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  /* text-xs */
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #6b7280;
+  /* text-gray-500 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estado Activo */
+.lang-btn.active {
+  background-color: #6b21a8;
+  /* bg-purple-700 */
+  color: white !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+/* Ajuste para cuando el nav es transparente (Home) */
+.home-nav:not(.scrolled) .lang-btn:not(.active) {
+  color: #374151;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================= NAV NORMAL ================= */
+.normal-nav {
+  background: white;
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.normal-nav.fixed {
+  position: fixed !important;
+  top: 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+  animation: navSlideDown 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.normal-nav.relative {
+  position: relative;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* ================= CARRUSEL ================= */
+.carousel-container {
+  position: relative;
+}
+
+/* Scroll */
+.program-carousel {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.program-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= BOTONES ================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #8B008B;
+  color: #8B008B;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+/* Desktop botones más grandes */
+@media (min-width: 768px) {
+  .carousel-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.carousel-btn:hover {
+  background: #8B008B;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-btn {
+  left: -20px;
+}
+
+.right-btn {
+  right: -20px;
+}
+
+/* En desktop separarlos más */
+@media (min-width: 1024px) {
+  .left-btn {
+    left: -60px;
+  }
+
+  .right-btn {
+    right: -60px;
+  }
+}
+
+
+.bio-text {
+  display: -webkit-box;
+  line-clamp: 3;
+  /* Número de líneas visibles por defecto */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bio-text.expanded {
+  line-clamp: unset !important;
+  display: block;
+  /* Para que fluya naturalmente al expandirse */
+}
+
+/* Fade inferior elegante */
+.bio-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Quitar fade al expandir */
+.bio-text.expanded::after {
+  opacity: 0;
+}
+
+
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+}
+
+
+/* ================= TARJETAS ================= */
+.program-card {
+  min-width: 85%;
+  /* móvil: ocupa casi toda la pantalla */
+  max-width: 85%;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  scroll-snap-align: center;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .program-card {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .program-card {
+    min-width: 320px;
+    max-width: 320px;
+    padding: 28px 24px;
+    border-radius: 24px;
+  }
+}
+
+.program-card:hover {
+  border-color: #8B008B;
+  box-shadow: 0 10px 20px rgba(139, 0, 139, 0.15);
+  transform: translateY(-4px);
+}
+
+.program-card.active {
+  border-color: #8B008B;
+  background-color: #fdf4ff;
+}
+
+/* ================= DETALLE ================= */
+#program-detail {
+  transition: all 0.4s ease;
+}
+
+
+
+/* ================= DROPDOWN ================= */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 340px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 100;
+  margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3e8ff;
+}
+
+.dropdown-item:hover {
+  background-color: #f3e8ff;
+  color: #8B008B;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-time {
+  font-weight: 700;
+  color: #8B008B;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* ================= VIDEO ================= */
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-bg {
+    width: 100vw;
+    height: 56.25vw;
+  }
+}
+
+/* ==================== SECCIÓN LLOC ==================== */
+#lloc .map-container {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#lloc .map-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(139, 0, 139, 0.18);
+}
+
+#lloc iframe {
+  border-radius: 20px;
+  width: 100%;
+  height: 580px;
+}
+
+/* Responsivo mapa */
+@media (max-width: 1024px) {
+  #lloc iframe {
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  #lloc iframe {
+    height: 300px;
+  }
+}
+
+/* Color auxiliar */
+.logo-purple {
+  color: #8B008B;
+}
+
+/* Transición suave del icono hamburguesa a X */
+#menu-toggle i {
+  transition: transform 0.3s ease;
+}
+
+#menu-toggle .fa-times {
+  transform: rotate(90deg);
+}
+
+#back-to-top {
+  box-shadow: 0 10px 15px -3px rgba(139, 0, 139, 0.3);
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 20px -5px rgba(139, 0, 139, 0.4);
+}
+
+/* En móvil un poco más pequeño */
+@media (max-width: 640px) {
+  #back-to-top {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ================= MOBILE NAV ================= */
+
+@media (max-width: 768px) {
+
+  /* Ocultar menú por defecto */
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  /* Mostrar cuando está activo */
+  .menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Links más grandes en móvil */
+  .menu a,
+  .menu button {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  /* Logo */
+.nav-logo {
+  height: 80px;
+  margin-top: 0px;
+  transform: scale(1);
+}
+
+  .dropdown-content {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    margin-top: 8px;
+    padding-left: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown-content.show {
+    max-height: 500px;
+    /* suficiente para contenido */
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+  }
+
+  /* Quitar animación rara */
+  .dropdown-content.hidden {
+    display: block;
+  }
+
+}

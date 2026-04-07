@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title-page">I Jornada d’Acollida Sociolingüística | 8 de maig 2026 · Barcelona</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/iconL.png">
+</head>
+
+<body class="font-sans">
+
+  <div id="main-nav"></div>
+
+  <section id="inici" class="relative h-screen flex items-center justify-center text-black overflow-hidden pt-24">
+
+    <div class="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+      <iframe class="video-bg"
+        src="https://www.youtube.com/embed/-eHqavSffrA?autoplay=1&mute=1&controls=0&loop=1&playlist=-eHqavSffrA"
+        frameborder="0" allow="autoplay; fullscreen">
+      </iframe>
+    </div>
+
+    <div class="absolute top-0 left-0 w-full h-full bg-white/70 z-10"></div>
+
+    <div class="relative z-20 text-center px-6">
+      <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-4">
+        
+      </h1>
+      <p id="hero-date" class="text-3xl mb-2"></p>
+    </div>
+
+  </section>
+
+  <section id="quisom" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-quisom-title" class="text-4xl font-bold text-center mb-12 logo-purple"></h2>
+      <div class="mx-auto text-justify text-gray-700 text-lg">
+        <p id="quisom-p1" class="mb-6">
+         
+        </p>
+        <p id="quisom-p2" class="mb-6">
+          
+        </p>
+
+        <p id="quisom-p3">
+          
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="lloc" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 id="lloc-title" class="text-4xl font-bold logo-purple mb-4"></h2>
+        <p id="lloc-venue" class="text-xl text-gray-600"></p>
+        <p id="lloc-address" class="text-lg text-gray-500 mt-2">Avinguda de les Drassanes, 3, 08001 Barcelona</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="map-container rounded-3xl overflow-hidden shadow-xl border border-gray-100 order-2 lg:order-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.2!2d2.1735!3d41.3772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f0f0f0f0f0%3A0x8b8b8b8b8b8b8b8b!2sAvinguda%20de%20les%20Drassanes%2C%203%2C%2008001%20Barcelona!5e0!3m2!1sca!2ses!4v1743100000000"
+            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="space-y-8 order-1 lg:order-2">
+          <div class="bg-gray-50 rounded-2xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <i class="fa-solid fa-location-dot text-4xl text-purple-700"></i>
+              <h3 id="arribar-title" class="text-2xl font-semibold text-gray-800"></h3>
+            </div>
+            <ul class="space-y-4 text-gray-700">
+              <li id="transport-metro" class="flex gap-3">
+                <span id="transport-metro-label" class="font-medium w-20"></span>
+                <span id="transport-metro-text"></span>
+              </li>
+
+              <li id="transport-bus" class="flex gap-3">
+                <span id="transport-bus-label" class="font-medium w-20"></span>
+                <span id="transport-bus-text"></span>
+              </li>
+
+              <li id="transport-tram" class="flex gap-3">
+                <span id="transport-tram-label" class="font-medium w-20"></span>
+                <span id="transport-tram-text"></span>
+              </li>
+
+              <li id="transport-bici" class="flex gap-3">
+                <span id="transport-bici-label" class="font-medium w-20"></span>
+                <span id="transport-bici-text"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <i class="fa-solid fa-clock text-4xl text-purple-700"></i>
+              <h3 id="horari-title" class="text-2xl font-semibold text-gray-800"></h3>
+            </div>
+            <p id="horari-text" class="text-gray-700 leading-relaxed text-lg">
+              
+            </p>
+          </div>
+
+          <a id="maps-link"
+            href="https://www.google.com/maps/dir/?api=1&destination=Avinguda+de+les+Drassanes%2C+3%2C+08001+Barcelona"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-purple-700 hover:bg-purple-800 text-white font-medium px-8 py-4 rounded-2xl transition-all">
+            <i class="fa-solid fa-directions"></i>
+            <span id="maps-link-text"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inscripcio" class="py-24 bg-purple-700 text-white">
+    <div class="max-w-3xl mx-auto text-center px-6">
+      <h2 id="inscripcio-titlei" class="text-4xl font-bold mb-6"></h2>
+      <p id="inscripcio-text" class="text-xl mb-10"></p>
+      <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeLfJR7t_OKzY3__xq3ahS6AjqP7xPOnlgxLMoymoEn6Y68QA/viewform"
+        target="_blank" rel="noopener noreferrer"
+        class="inline-block bg-white text-purple-700 hover:bg-gray-100 font-semibold text-2xl px-16 py-6 rounded-2xl transition shadow-lg">
+        <span id="inscripcio-btn"></span>
+        <i class="fa-solid fa-arrow-right text-2xl group-active:translate-x-2 transition-transform"></i>
+
+      </a>
+    </div>
+  </section>
+
+  <div id="main-footer"></div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/lang.js"></script>
+
+
+</body>
+
+</html>

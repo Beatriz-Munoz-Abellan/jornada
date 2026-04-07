@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="inscripcioTitle">Inscripció - I Jornada d’Acollida Sociolingüística</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/iconL.png">
+
+</head>
+
+<body class="font-sans">
+
+    <div id="main-nav"></div>
+
+    <section class="bg-gradient-to-br from-purple-900 to-purple-700 text-white py-24 p-7">
+        <div class="text-center">
+            <div class="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2.5 rounded-3xl">
+                <i class="fa-solid fa-ticket text-purple-200 text-xl"></i>
+                <span class="uppercase tracking-[2px] text-sm font-semibold text-white"
+                    data-key="inscripcioObertes"></span>
+            </div>
+
+            <h2 class="text-4xl md:text-5xl font-bold mt-8 mb-5 leading-tight" data-key="inscripcioHeroTitle">
+            </h2>
+            <p class="text-xl text-purple-100 max-w-2xl mx-auto" data-key="inscripcioHeroDesc">
+            </p>
+        </div>
+    </section>
+
+    <!-- ====================== SECCIÓN INSCRIPCIÓN ====================== -->
+    <div class="py-20 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <!-- Tarjeta principal -->
+            <div class="bg-white rounded-3xl shadow-xl p-10 md:p-14 border border-gray-100 max-w-2xl mx-auto">
+                <div class="space-y-10">
+
+                    <!-- Dades bàsiques -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center md:text-left">
+                            <div class="text-purple-600 mb-3">
+                                <i class="fa-solid fa-calendar-day text-3xl"></i>
+                            </div>
+                            <p class="font-semibold text-gray-900" data-key="inscripcioDate">8 de maig de 2026</p>
+                            <p class="text-sm text-gray-500" data-key="inscripcioDay">Divendres</p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-purple-600 mb-3">
+                                <i class="fa-solid fa-location-dot text-3xl"></i>
+                            </div>
+                            <p class="font-semibold text-gray-900" data-key="inscripcioVenue">Av. de les Drassanes, 3,
+                                Ciutat Vella</p>
+                            <p class="text-sm text-gray-500" data-key="inscripcioAddress">08001 Barcelona</p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <div class="text-emerald-600 mb-3">
+                                <i class="fa-solid fa-circle-check text-3xl"></i>
+                            </div>
+                            <p class="font-semibold text-emerald-600" data-key="inscripcioGratuita">Gratuïta</p>
+                            <p class="text-sm text-gray-500" data-key="inscripcioLimit">Places limitades</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón principal -->
+                    <div class="pt-6">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLfJR7t_OKzY3__xq3ahS6AjqP7xPOnlgxLMoymoEn6Y68QA/viewform"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group block w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold text-xl py-7 rounded-2xl transition-all duration-300 shadow-lg shadow-purple-300 hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-4">
+                            <span data-key="inscripcioBtn">Inscriu-te ara</span>
+                            <i
+                                class="fa-solid fa-arrow-right text-2xl group-active:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <p class="text-sm text-gray-500" data-key="inscripcioConfirm">
+                        Rebràs confirmació per correu electrònic en un termini màxim de 48 hores.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Nota adicional -->
+            <div class="mt-10 text-sm text-gray-500 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-info-circle"></i>
+                Data límit d’inscripció:
+                <span class="font-medium text-gray-700" data-key="inscripcioDeadline">1 de maig de 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-footer"></div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lang.js"></script>
+</body>
+
+</html>
