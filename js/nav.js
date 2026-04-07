@@ -1,16 +1,17 @@
 // ====================== NAV.JS ======================
 
-let BASE_PATH = '/Jornada/';   // ← Cambia esto si cambias el nombre del repo
+let BASE_PATH = '/';
 
-// ================= DETECTAR BASE PATH (más robusto) =================
+// ================= DETECTAR BASE PATH =================
 function detectBasePath() {
-  const path = window.location.pathname;
+  const pathParts = window.location.pathname.split('/');
+  BASE_PATH = pathParts.length > 1 ? `/${pathParts[1]}/` : '/';
+}
 
-  if (path.includes('/Jornada/')) {
-    BASE_PATH = '/Jornada/';
-  } else if (path === '/' || path === '/index.html') {
-    BASE_PATH = '/';
-  }
+// ================= UTIL =================
+function isHomePage() {
+  const path = window.location.pathname;
+  return path === '/' || path.endsWith('/index.html');
 }
 
 // ================= LOAD NAV =================
@@ -20,15 +21,8 @@ function loadNav() {
   const navContainer = document.getElementById('main-nav');
   if (!navContainer) return;
 
-  const currentPath = window.location.pathname.toLowerCase();
+  const isHome = isHomePage();
 
-  // Detectar si estamos en la página de inicio
-  const isHome = currentPath === '/' || 
-                 currentPath.endsWith('/index.html') || 
-                 currentPath === BASE_PATH || 
-                 currentPath === BASE_PATH + 'index.html';
-
-  // Items del programa
   const programItems = [
     { time: "8:30", key: "card0_Title" },
     { time: "9:00", key: "card1_Title" },
@@ -58,23 +52,20 @@ function loadNav() {
       <div class="max-w-7xl mx-auto px-6 py-5">
         <div class="flex justify-between items-center">
 
-          <!-- LOGO -->
           <a href="${BASE_PATH}index.html">
             <img src="${BASE_PATH}img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
           </a>
 
-          <!-- HAMBURGUESA -->
           <button id="menu-toggle" class="md:hidden text-2xl">
             <i class="fa-solid fa-bars"></i>
           </button>
 
-          <!-- MENÚ -->
           <nav id="main-menu" class="menu flex gap-8 md:gap-10 font-medium ${textColor}">
             <a href="${BASE_PATH}index.html" class="nav-link" data-key="navHome"></a>
             <a href="${BASE_PATH}nosotros.html" class="nav-link" data-key="navAbout"></a>
 
             <div class="relative dropdown">
-              <button id="program-btn" class="nav-link flex items-center gap-1">
+              <button id="program-btn" class="nav-link flex items-center gap-1" aria-expanded="false">
                 <span data-key="navProgram"></span>
                 <i id="chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
               </button>
@@ -88,7 +79,6 @@ function loadNav() {
             <a href="${BASE_PATH}contacto.html" class="nav-link" data-key="navContact"></a>
           </nav>
 
-          <!-- IDIOMAS -->
           <div class="flex gap-2 ml-4">
             <button id="btn-ca" class="lang-btn">CA</button>
             <button id="btn-es" class="lang-btn">ES</button>
@@ -106,88 +96,77 @@ function loadNav() {
   setActiveNavLink();
 }
 
+// ================= ACTIVE LINK =================
 function setActiveNavLink() {
   const currentPath = window.location.pathname.toLowerCase();
-  
-  // Quitar "active" a todos los enlaces primero
+
   document.querySelectorAll('.nav-link').forEach(link => {
     link.classList.remove('active');
-  });
 
-  // === Links normales ===
-  document.querySelectorAll('.nav-link').forEach(link => {
     const href = link.getAttribute('href') || '';
     const cleanHref = href.toLowerCase().replace(BASE_PATH, '');
 
     if (cleanHref === 'index.html' || cleanHref === '') {
-      if (currentPath === '/' || 
-          currentPath.endsWith('/index.html') || 
-          currentPath === BASE_PATH) {
+      if (isHomePage()) {
         link.classList.add('active');
       }
-    } 
-    else if (currentPath.includes(cleanHref)) {
+    } else if (currentPath.endsWith(cleanHref)) {
       link.classList.add('active');
     }
   });
 
-  // === Caso especial: Programa ===
   const programBtn = document.getElementById('program-btn');
   if (programBtn) {
-    const isProgramPage = currentPath.includes('programa.html');
-    
-    if (isProgramPage) {
-      programBtn.classList.add('active');
-    } else {
-      programBtn.classList.remove('active');
-    }
+    programBtn.classList.toggle(
+      'active',
+      currentPath.includes('programa.html')
+    );
   }
 }
-setTimeout(setActiveNavLink, 100);
-// ================= NAV EVENTS =================
 
+// ================= NAV EVENTS =================
 function initNavEvents() {
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('main-menu');
-  const icon = menuToggle ? menuToggle.querySelector('i') : null;
+  const icon = menuToggle?.querySelector('i');
 
-  if (!menuToggle || !menu || !icon) return;
+  if (menuToggle && menu && icon) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
 
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-
-    if (isOpen) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-times');
-    } else {
-      icon.classList.remove('fa-times');
-      icon.classList.add('fa-bars');
-    }
-  });
+      icon.classList.toggle('fa-bars', !isOpen);
+      icon.classList.toggle('fa-times', isOpen);
+    });
+  }
 
   const programBtn = document.getElementById('program-btn');
   if (programBtn) {
     programBtn.addEventListener('click', toggleDropdown);
   }
 
-  document.getElementById('btn-ca')?.addEventListener('click', () => {
-    changeLanguage('ca');
-    updateActiveLanguage('ca');
+  // Cerrar dropdown al hacer click fuera
+  document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('dropdown-menu');
+    const button = document.getElementById('program-btn');
+
+    if (!dropdown || !button) return;
+
+    if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('show');
+      dropdown.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+    }
   });
 
-  document.getElementById('btn-es')?.addEventListener('click', () => {
-    changeLanguage('es');
-    updateActiveLanguage('es');
-  });
-
-  document.getElementById('btn-en')?.addEventListener('click', () => {
-    changeLanguage('en');
-    updateActiveLanguage('en');
+  ['ca', 'es', 'en'].forEach(code => {
+    document.getElementById(`btn-${code}`)?.addEventListener('click', () => {
+      changeLanguage(code);
+      updateActiveLanguage(code);
+    });
   });
 }
 
-// ================= SCROLL EFFECT =================
-
+// ================= SCROLL =================
 function initScrollEffect() {
   const header = document.getElementById('main-header');
   if (!header) return;
@@ -196,14 +175,9 @@ function initScrollEffect() {
 
   function updateHeader() {
     const scrollY = window.scrollY;
-    const isHome = window.location.pathname === '/' || window.location.pathname.includes('index.html');
 
-    if (isHome) {
-      if (scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+    if (isHomePage()) {
+      header.classList.toggle('scrolled', scrollY > 50);
     } else {
       if (scrollY > 100) {
         header.classList.add('fixed', 'shadow-md');
@@ -226,68 +200,48 @@ function initScrollEffect() {
 }
 
 // ================= DROPDOWN =================
-
-let dropdownOpen = false;
-
 function toggleDropdown() {
   const menu = document.getElementById('dropdown-menu');
   const chevron = document.getElementById('chevron');
+  const btn = document.getElementById('program-btn');
 
-  if (!menu || !chevron) return;
+  if (!menu || !chevron || !btn) return;
 
   const isMobile = window.innerWidth <= 768;
+  const isOpen = menu.classList.contains('show');
 
   if (isMobile) {
     menu.classList.toggle('show');
-
-    chevron.style.transform =
-      menu.classList.contains('show')
-        ? 'rotate(180deg)'
-        : 'rotate(0deg)';
   } else {
-    dropdownOpen = !dropdownOpen;
-
-    if (dropdownOpen) {
+    if (isOpen) {
+      menu.classList.remove('show');
+      setTimeout(() => menu.classList.add('hidden'), 200);
+    } else {
       menu.classList.remove('hidden');
       menu.offsetHeight;
       menu.classList.add('show');
-      chevron.style.transform = 'rotate(180deg)';
-    } else {
-      menu.classList.remove('show');
-      chevron.style.transform = 'rotate(0deg)';
-      setTimeout(() => menu.classList.add('hidden'), 250);
     }
   }
+
+  const nowOpen = menu.classList.contains('show');
+  chevron.style.transform = nowOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+  btn.setAttribute('aria-expanded', nowOpen);
 }
 
 function goToProgram(index) {
-  const menu = document.getElementById('dropdown-menu');
-  const chevron = document.getElementById('chevron');
-
-  if (menu) {
-    menu.classList.remove('show');
-    if (chevron) chevron.style.transform = 'rotate(0deg)';
-    setTimeout(() => menu.classList.add('hidden'), 300);
-  }
-
   window.location.href = `${BASE_PATH}programa.html?item=${index}`;
 }
 
-// ================= LANGUAGE ACTIVE =================
-
+// ================= LANGUAGE =================
 function updateActiveLanguage(lang) {
-  const buttons = ["ca", "es", "en"];
-
-  buttons.forEach(code => {
-    const btn = document.getElementById(`btn-${code}`);
-    if (!btn) return;
-
-    btn.classList.toggle("active", code === lang);
+  ['ca', 'es', 'en'].forEach(code => {
+    document
+      .getElementById(`btn-${code}`)
+      ?.classList.toggle('active', code === lang);
   });
 }
 
 // ================= CARRUSEL =================
-
 function initCarousel() {
   const carousel = document.getElementById('program-carousel');
   if (!carousel) return;
@@ -296,13 +250,6 @@ function initCarousel() {
   const btnRight = document.getElementById('btn-right');
 
   const scrollAmount = 320;
-
-  function scrollCarousel(direction) {
-    carousel.scrollBy({
-      left: scrollAmount * direction,
-      behavior: 'smooth'
-    });
-  }
 
   function updateArrows() {
     const scrollLeft = carousel.scrollLeft;
@@ -319,8 +266,14 @@ function initCarousel() {
     }
   }
 
-  btnLeft?.addEventListener('click', () => scrollCarousel(-1));
-  btnRight?.addEventListener('click', () => scrollCarousel(1));
+  btnLeft?.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  btnRight?.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
   carousel.addEventListener('scroll', updateArrows);
 
   window.addEventListener('load', () => {
@@ -330,32 +283,19 @@ function initCarousel() {
 }
 
 // ================= SMOOTH SCROLL =================
-
-// ... (tus funciones loadNav, initNavEvents, etc., se mantienen igual)
-
-// 1. Encapsula el Smooth Scroll
 function initSmoothScroll() {
-  // Ahora buscamos los enlaces DESPUÉS de que el Nav se ha cargado
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === "#") return;
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
 
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 }
 
-
 // ================= INIT =================
-
 document.addEventListener('DOMContentLoaded', () => {
   loadNav();
   initScrollEffect();
@@ -364,8 +304,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================= GLOBAL =================
-
 window.toggleDropdown = toggleDropdown;
 window.goToProgram = goToProgram;
-
-
