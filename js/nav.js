@@ -37,8 +37,8 @@ const isHome = window.location.pathname === '/' || window.location.pathname === 
         <div class="flex justify-between items-center">
 
           <!-- LOGO -->
-          <a href="/index.html">
-            <img src="/img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
+          <a href="index.html">
+            <img src="img/Logo-Jornada1.png" alt="Logo" class="${isHome ? 'nav-logo' : 'h-20'}">
           </a>
 
           <!-- HAMBURGUESA -->
