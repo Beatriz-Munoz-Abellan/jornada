@@ -341,3 +341,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.toggleDropdown = toggleDropdown;
 window.goToProgram = goToProgram;
+
+
