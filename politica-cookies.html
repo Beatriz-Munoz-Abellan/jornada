@@ -1,52 +1,25 @@
-<!DOCTYPE html>
-<html lang="ca">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Cookies| 8 de maig 2026 · Barcelona</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="img/iconL.png">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <style>
-    /* Mismo degradado sutil de fondo del estilo anterior */
-    body {
-      background: radial-gradient(circle at top right, #f3f4f6, #ffffff);
-      min-height: 100vh;
-    }
-  </style>
-</head>
-
 <body class="text-gray-900 font-sans leading-relaxed">
-
   <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
-
     <header class="mb-12 border-b border-gray-200 pb-8">
-      <div
-        class="inline-block bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+      <div class="inline-block bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4" data-key="legalInfo">
         Información Legal
       </div>
       <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-        Política de <span class="text-purple-700">Cookies</span>
+        <span data-key="policyTitlePrefix">Política de</span> <span class="text-purple-700">Cookies</span>
       </h1>
-      <p class="mt-4 text-lg text-gray-600">
+      <p class="mt-4 text-lg text-gray-600" data-key="policyIntro">
         Este sitio web respeta tu privacidad y utiliza únicamente cookies técnicas necesarias.
       </p>
     </header>
 
     <div class="grid gap-10">
-
       <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
         <div class="flex items-start gap-4">
           <div class="bg-purple-50 p-3 rounded-lg text-2xl">🍪</div>
           <div>
-            <h2 class="text-2xl font-bold mb-3">¿Qué son las cookies?</h2>
-            <p class="text-gray-600">
-              Las cookies son pequeños archivos de texto que los sitios web que visitas envían a tu navegador. Permiten
-              que el sitio web recuerde información sobre tu visita, lo que puede facilitar tu próxima visita y hacer
-              que el sitio te resulte más útil.
+            <h2 class="text-2xl font-bold mb-3" data-key="whatAreCookiesTitle">¿Qué son las cookies?</h2>
+            <p class="text-gray-600" data-key="whatAreCookiesText">
+              Las cookies son pequeños archivos de texto que los sitios web que visitas envían a tu navegador...
             </p>
           </div>
         </div>
@@ -55,65 +28,58 @@
       <section>
         <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
           <span class="w-8 h-1 bg-purple-700 rounded-full"></span>
-          Cómo utilizamos las cookies
+          <span data-key="howWeUseTitle">Cómo utilizamos las cookies</span>
         </h2>
-
         <div class="grid md:grid-cols-2 gap-6">
           <div class="border border-gray-200 p-6 rounded-xl hover:border-purple-300 transition-colors bg-white">
-            <h3 class="font-bold text-purple-700 mb-2">Cookies Técnicas (Propias)</h3>
-            <p class="text-sm text-gray-500">
-              Son aquellas esenciales para el correcto funcionamiento del sitio web. Nos permiten gestionar tu
-              consentimiento sobre las cookies y recordar tus preferencias de idioma.
+            <h3 class="font-bold text-purple-700 mb-2" data-key="techCookiesTitle">Cookies Técnicas (Propias)</h3>
+            <p class="text-sm text-gray-500" data-key="techCookiesText">
+              Son aquellas esenciales para el correcto funcionamiento del sitio web...
             </p>
           </div>
           <div class="border border-gray-200 p-6 rounded-xl hover:border-purple-300 transition-colors bg-white">
-            <h3 class="font-bold text-purple-700 mb-2">Sin cookies de terceros</h3>
-            <p class="text-sm text-gray-500">
-              No utilizamos cookies de análisis (como Google Analytics), publicitarias o de seguimiento ajenas a este
-              sitio web.
+            <h3 class="font-bold text-purple-700 mb-2" data-key="noThirdPartyTitle">Sin cookies de terceros</h3>
+            <p class="text-sm text-gray-500" data-key="noThirdPartyText">
+              No utilizamos cookies de análisis, publicitarias o de seguimiento ajenas a este sitio web.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="overflow-hidden border border-gray-200 rounded-2xl bg-white">
+      <section class="overflow-hidden border border-gray-200 rounded-2xl bg-white text-sm">
         <table class="w-full text-left border-collapse">
           <thead class="bg-gray-50 border-b border-gray-200">
             <tr>
-              <th class="px-6 py-4 text-sm font-semibold text-gray-700">Identificador</th>
-              <th class="px-6 py-4 text-sm font-semibold text-gray-700">Propósito</th>
-              <th class="px-6 py-4 text-sm font-semibold text-gray-700">Duración</th>
+              <th class="px-6 py-4 font-semibold text-gray-700" data-key="tableId">Identificador</th>
+              <th class="px-6 py-4 font-semibold text-gray-700" data-key="tablePurpose">Propósito</th>
+              <th class="px-6 py-4 font-semibold text-gray-700" data-key="tableDuration">Duración</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr>
-              <td class="px-6 py-4 text-sm font-mono text-purple-600">cookie_consent</td>
-              <td class="px-6 py-4 text-sm text-gray-600">Recordar tu elección sobre la política de cookies de este
-                sitio.</td>
-              <td class="px-6 py-4 text-sm text-gray-500">1 año</td>
+              <td class="px-6 py-4 font-mono text-purple-600">cookie_consent</td>
+              <td class="px-6 py-4 text-gray-600" data-key="purposeConsent">Recordar tu elección sobre la política de cookies.</td>
+              <td class="px-6 py-4 text-gray-500" data-key="durationYear">1 año</td>
             </tr>
             <tr>
-              <td class="px-6 py-4 text-sm font-mono text-purple-600">lang</td>
-              <td class="px-6 py-4 text-sm text-gray-600">Recordar el idioma seleccionado para la navegación.</td>
-              <td class="px-6 py-4 text-sm text-gray-500">Sesión</td>
+              <td class="px-6 py-4 font-mono text-purple-600">lang</td>
+              <td class="px-6 py-4 text-gray-600" data-key="purposeLang">Recordar el idioma seleccionado.</td>
+              <td class="px-6 py-4 text-gray-500" data-key="durationSession">Sesión</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section class="bg-gray-900 text-white p-8 rounded-2xl shadow-xl">
-        <h2 class="text-2xl font-bold mb-4">Tu configuración</h2>
-        <p class="text-gray-300 mb-6">
-          Dado que solo utilizamos cookies necesarias para que la web funcione, no existe opción de rechazarlas
-          individualmente, pero puedes borrar tus preferencias en cualquier momento.
+        <h2 class="text-2xl font-bold mb-4" data-key="configTitle">Tu configuración</h2>
+        <p class="text-gray-300 mb-6" data-key="configText">
+          Solo utilizamos cookies necesarias. Puedes borrar tus preferencias en cualquier momento.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="index.html"
-            class="px-6 py-3 bg-purple-700 hover:bg-purple-600 text-white rounded-xl font-medium transition inline-flex items-center gap-2 shadow">
+          <a href="index.html" class="px-6 py-3 bg-purple-700 hover:bg-purple-600 text-white rounded-xl font-medium transition inline-flex items-center gap-2 shadow" data-key="btnBack">
             Volver al Inicio
           </a>
-          <button onclick="resetCookies()"
-            class="px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl font-medium transition">
+          <button onclick="resetCookies()" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl font-medium transition" data-key="btnReset">
             Resetear mis preferencias
           </button>
         </div>
@@ -121,16 +87,10 @@
 
       <footer class="text-center pt-10 border-t border-gray-100">
         <p class="text-gray-500">
-          ¿Dudas sobre tu privacidad? Escríbenos a
+          <span data-key="footerText">¿Dudas sobre tu privacidad? Escríbenos a</span>
           <a href="mailto:hola@ejemplo.com" class="text-purple-700 font-semibold hover:underline">hola@ejemplo.com</a>
         </p>
       </footer>
-
     </div>
   </div>
-
-  <script src="js/lang.js"></script>
-  <script src="js/cookis.js"></script>
 </body>
-
-</html>
