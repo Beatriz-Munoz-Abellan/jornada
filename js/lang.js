@@ -266,13 +266,13 @@ const translations = {
     tallerC_Bio: "Professora agregada de la UAB i doctora en Didàctica de la Llengua i la Literatura. Membre del grup GREIP i investigadora principal del projecte CULT. La seva recerca se centra en l’educació plurilingüe, la mediació lingüística i les pràctiques docents en contextos multilingües, amb especial atenció a les interaccions a l’aula i les polítiques lingüístiques. Combina metodologies etnogràfiques i anàlisi de la conversa.",
 
     // Taller D
-    imgProgramaD: "<img src='img/' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
+    imgProgramaD: "<img src='img/D. Vero Cano.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
 
     tallerD_Title: "TALLER D — Biblioteques Humanes: llegir vides, escoltar experiències",
     tallerD_Desc: "Les Biblioteques Humanes substitueixen llibres per persones que comparteixen la seva història en primera persona. Aquesta metodologia internacional promou el diàleg i la superació de prejudicis a través de l’escolta directa.<br><br>El taller presenta l’origen i els principis de les Biblioteques Humanes i inclou una mostra vivencial: una persona-llibre vinculada a processos de migració i acollida compartirà la seva experiència en un format íntim i dialogat. Un espai segur per generar empatia, trencar estereotips i reconèixer la diversitat lingüística, cultural i vital de la ciutat.",
     tallerD_Target: "Alumnat, professorat, tècniques i voluntariat",
     tallerD_Name: "Vero Cano",
-    tallerD_Bio: "(pendents de rebre foto i bio)",
+    tallerD_Bio: "Professional de l’educació de persones adultes i de l’acció comunitària. És coordinadora de projectes a l’Escola de Vida Les Planes–La Florida (L’Hospitalet). Llicenciada en Ciències Polítiques i de l’Administració (UAB), compta amb formació especialitzada en facilitació de grups i transformació de conflictes, amb acreditació de l’IIFAC-E i un postgrau en Resolució de Conflictes Públics i Mediació Comunitària (UdG).",
 
     // Taller E
     imgProgramaE: "<img src='img/E. Judith Olmo.jpeg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Judith Olmo'>",
@@ -676,12 +676,12 @@ const translations = {
     tallerC_Bio: "Profesora agregada de la UAB y doctora en Didáctica de la Lengua y la Literatura. Miembro del grupo GREIP e investigadora principal del proyecto CULT. Su investigación se centra en la educación plurilingüe, la mediación lingüística y las prácticas docentes en contextos multilingües, con especial atención a las interacciones en el aula y las políticas lingüísticas. Combina metodologías etnográficas y análisis de la conversación.",
 
     // Taller D
-    imgProgramaD: "<img src='img/' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
+    imgProgramaD: "<img src='img/D. Vero Cano.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
     tallerD_Title: "TALLER D — Bibliotecas Humanas: leer vidas, escuchar experiencias",
     tallerD_Desc: "Las Bibliotecas Humanas sustituyen libros por personas que comparten su historia en primera persona. Esta metodología internacional promueve el diálogo y la superación de prejuicios a través de la escucha directa.<br><br>El taller presenta el origen y los principios de las Bibliotecas Humanas e incluye una muestra vivencial: una persona-libro vinculada a procesos de migración y acogida compartirá su experiencia en un formato íntimo y dialogado. Un espacio seguro para generar empatía, romper estereotipos y reconocer la diversidad lingüística, cultural y vital de la ciudad.",
     tallerD_Target: "Alumnado, profesorado, personal técnico y voluntariado",
     tallerD_Name: "Vero Cano",
-    tallerD_Bio: "(pendiente de recibir foto y bio)",
+    tallerD_Bio: "Profesional de la educación de personas adultas y de la acción comunitaria. Es coordinadora de proyectos en la Escuela de Vida Las Planes–la Florida (La Hospitalet). Licenciada en Ciencias Políticas y de la Administración (UAB), cuenta con formación especializada en facilitación de grupos y transformación de conflictos, con acreditación de la IIFAC-E y un posgrado en Resolución de Conflictos Públicos y Mediación Comunitaria (UdG).",
 
     // Taller E
     imgProgramaE: "<img src='img/E. Judith Olmo.jpeg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Judith Olmo'>",
@@ -1077,12 +1077,12 @@ const translations = {
     tallerC_Bio: "Associate professor at UAB and PhD in Language and Literature Didactics. Member of the GREIP group and principal investigator of the CULT project. Her research focuses on multilingual education, linguistic mediation, and teaching practices in multilingual contexts, with special attention to classroom interaction and language policies. She combines ethnographic methodologies and conversation analysis.",
 
     // Workshop D
-    imgProgramaD: "<img src='img/' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
+    imgProgramaD: "<img src='img/D. Vero Cano.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt=''>",
     tallerD_Title: "WORKSHOP D — Human Libraries: reading lives, listening to experiences",
     tallerD_Desc: "Human Libraries replace books with people who share their stories firsthand. This international methodology promotes dialogue and overcoming prejudice through direct listening.<br><br>The workshop presents the origins and principles of Human Libraries and includes an experiential session: a 'human book' connected to migration and reception processes will share their story in an intimate, dialogic format. A safe space to foster empathy, break stereotypes, and recognize the city’s linguistic, cultural, and life diversity.",
     tallerD_Target: "Students, teachers, technical staff and volunteers",
     tallerD_Name: "Vero Cano",
-    tallerD_Bio: "(photo and bio pending)",
+    tallerD_Bio: "Professional in adult education and community action. She is project coordinator at the School of Life Les Planes-La Florida (L’Hospitalet). Graduated in Political and Administration Sciences (UAB), she has specialized training in group facilitation and conflict transformation, with IIFAC-E accreditation and a postgraduate degree in Public Conflict Resolution and Community Mediation (UdG).",
 
     // Workshop E
     imgProgramaE: "<img src='img/E. Judith Olmo.jpeg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Judith Olmo'>",

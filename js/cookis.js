@@ -11,14 +11,14 @@ function injectCookieBanner() {
                 <h3 class="text-lg font-semibold text-gray-800" data-key="cookieTitle">Cookies</h3>
                 <p class="text-sm text-gray-600 mt-1 leading-relaxed" data-key="cookieText">
                 Utilitzem galetes pròpies i de tercers per millorar la teva experiència, analitzar el trànsit i mostrar contingut personalitzat Pots consultar la nostra
-                 <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>
+                 <a href='politica-cookies.html' class='text-[#7a044b] font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>
                 </p>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
                 <button id="btn-reject" class="px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 hover:bg-gray-200 transition">
                     <span data-key="cookieReject">Rebutjar</span>
                 </button>
-                <button id="btn-accept" class="px-5 py-2 rounded-xl text-sm font-semibold bg-purple-700 text-white hover:bg-purple-800 transition shadow">
+                <button id="btn-accept" class="px-5 py-2 rounded-xl text-sm font-semibold bg-[#7a044b]/70 text-white hover:bg-[#7a044b]/80 transition shadow">
                     <span data-key="cookieAccept">Acceptar </span>
                 </button>
             </div>
