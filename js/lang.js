@@ -127,49 +127,49 @@ const translations = {
     min30: "30 min", min60: "60 min", min45: "45 min", min15: "15 min", min75: "1h 15 min",
     content0: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-id-card text-3xl text-[#7a044b]'></i><p>De 8:30 a 9:15 h. Recepció dels participants i lliurament d’acreditacions.</p></div>",
     content1: `
-      <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm overflow-hidden">
+  <div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
 
-          <!-- Cabecera con franja de color -->
-          <div class="flex items-center gap-4 -mx-8 -mt-8 px-8 py-6 text-[#7a044b] mb-8">
-            <i class="fa-solid fa-microphone-lines text-4xl opacity-90"></i>
-            <div>
-              <p class="font-semibold text-m text-gray-800 ">9:30 – 9:45 h.</p>
-              <p class="text-xl font-semibold">Obertura de la jornada - Presentació oficial</p>
-            </div>
-          </div>
+  <!-- Cabecera con franja de color -->
+  <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8">
+    <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i>
+    <div>
+      <p class="font-semibold text-sm md:text-base text-gray-800">9:30 – 9:45 h.</p>
+      <p class="text-lg md:text-xl font-semibold leading-tight">Obertura de la jornada - Presentació oficial</p>
+    </div>
+  </div>
 
-          <div class="grid md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
-            <!-- Vanessa Bretxa -->
-            <div class="flex gap-5 group">
-              <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
-                <img src="img/Vanessa Bretxa.jpeg" 
-                      alt="Vanessa Bretxa" 
-                      class="w-full h-full object-cover ">
-              </div>
-              <div class="pt-1">
-                <h4 class="font-bold text-gray-900 text-lg">Sra. Vanessa Bretxa</h4>
-                <p class="text-[#7a044b] font-semibold mt-0.5">Directora General d’Accés al Coneixement i Impuls de l’Ús del Català</p>
-                <p class="text-sm text-gray-500 mt-2">Departament de Política Lingüística</p>
-              </div>
-            </div>
+    <!-- Vanessa Bretxa -->
+    <div class="resMo flex gap-4 md:gap-5 group">
+      <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+        <img src="img/Vanessa Bretxa.jpeg" 
+             alt="Vanessa Bretxa" 
+             class="w-full h-full object-cover">
+      </div>
+      <div class="pt-1">
+        <h4 class="font-bold text-gray-900 text-base md:text-lg">Sra. Vanessa Bretxa</h4>
+        <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Directora General d’Accés al Coneixement i Impuls de l’Ús del Català</p>
+        <p class="text-sm text-gray-500 mt-2">Departament de Política Lingüística</p>
+      </div>
+    </div>
 
-            <!-- David Moya -->
-            <div class="flex gap-5 group">
-              <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
-                <img src="img/foto_david_moya.jpeg" 
-                      alt="David Moya" 
-                      class="w-full h-full object-cover">
-              </div>
-              <div class="pt-1">
-                <h4 class="font-bold text-gray-900 text-lg">Sr. David Moya</h4>
-                <p class="text-[#7a044b] font-semibold mt-0.5">Director General de Migracions i Refugi</p>
-                <p class="text-sm text-gray-500 mt-2">Departament de Drets Socials</p>
-              </div>
-            </div>
+    <!-- David Moya -->
+    <div class="resMo flex gap-4 md:gap-5 group">
+      <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+        <img src="img/foto_david_moya.jpeg" 
+             alt="David Moya" 
+             class="w-full h-full object-cover">
+      </div>
+      <div class="pt-1">
+        <h4 class="font-bold text-gray-900 text-base md:text-lg">Sr. David Moya</h4>
+        <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Director General de Migracions i Refugi</p>
+        <p class="text-sm text-gray-500 mt-2">Departament de Drets Socials</p>
+      </div>
+    </div>
 
-          </div>
-          </div>
+  </div>
+</div>
     `,
     content2: `
         <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm overflow-hidden">
@@ -554,7 +554,7 @@ const translations = {
         <div class="grid md:grid-cols-2 gap-8">
           
             <!-- Vanessa Bretxa -->
-            <div class="flex gap-5 group">
+            <div class="resMo flex gap-5 group">
                 <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                     <img src="img/Vanessa Bretxa.jpeg" 
                           alt="Vanessa Bretxa" 
@@ -568,7 +568,7 @@ const translations = {
             </div>
 
             <!-- David Moya -->
-            <div class="flex gap-5 groupr">
+            <div class="resMo flex gap-5 groupr">
                 <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                     <img src="img/foto_david_moya.jpeg" 
                           alt="David Moya" 
@@ -955,7 +955,7 @@ const translations = {
           <div class="grid md:grid-cols-2 gap-8">
               
               <!-- Vanessa Bretxa -->
-              <div class="flex gap-5 group">
+              <div class="resMo flex gap-5 group">
                   <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                       <img src="img/Vanessa Bretxa.jpeg" 
                             alt="Vanessa Bretxa" 
@@ -969,7 +969,7 @@ const translations = {
               </div>
 
               <!-- David Moya -->
-              <div class="flex gap-5 group">
+              <div class="resMo flex gap-5 group">
                   <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                       <img src="img/foto_david_moya.jpeg" 
                             alt="David Moya" 

@@ -548,3 +548,9 @@
 @media (max-width: 640px) {
   .cookie-banner { bottom: 10px; padding: 18px; }
 }
+
+@media (max-width: 480px) {
+  .resMo{
+    display: block !important;
+  }
+}
