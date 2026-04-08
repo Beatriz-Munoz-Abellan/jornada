@@ -22,7 +22,7 @@
 }
 
 .home-nav.scrolled a:hover {
-  color: #8B008B;
+  color: #7a044b;
 }
 
 /* Logo */
@@ -60,7 +60,7 @@
 
 /* Estado Activo */
 .lang-btn.active {
-  background-color: #6b21a8;
+  background-color: #7a044b;
   /* bg-purple-700 */
   color: white !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -129,8 +129,8 @@
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #8B008B;
-  color: #8B008B;
+  border: 2px solid #7a044b;
+  color: #7a044b;
   width: 48px;
   height: 48px;
   border-radius: 9999px;
@@ -151,7 +151,7 @@
 }
 
 .carousel-btn:hover {
-  background: #8B008B;
+  background: #7a044b;
   color: white;
   transform: translateY(-50%) scale(1.1);
 }
@@ -260,13 +260,13 @@
 }
 
 .program-card:hover {
-  border-color: #8B008B;
+  border-color: #7a044b;
   box-shadow: 0 10px 20px rgba(139, 0, 139, 0.15);
   transform: translateY(-4px);
 }
 
 .program-card.active {
-  border-color: #8B008B;
+  border-color: #7a044b;
   background-color: #fdf4ff;
 }
 
@@ -312,7 +312,7 @@
 
 .dropdown-item:hover {
   background-color: #f3e8ff;
-  color: #8B008B;
+  color: #7a044b;
 }
 
 .dropdown-item:last-child {
@@ -321,7 +321,7 @@
 
 .dropdown-time {
   font-weight: 700;
-  color: #8B008B;
+  color: #7a044b;
   width: 100px;
   flex-shrink: 0;
 }
@@ -371,11 +371,6 @@
   #lloc iframe {
     height: 300px;
   }
-}
-
-/* Color auxiliar */
-.logo-purple {
-  color: #8B008B;
 }
 
 /* Transición suave del icono hamburguesa a X */

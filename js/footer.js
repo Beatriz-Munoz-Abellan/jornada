@@ -5,11 +5,13 @@ function loadFooter() {
 
   footerContainer.innerHTML = `
     <!-- ====================== ORGANITZACIÓ I COL·LABORADORS ====================== -->
-    <section class="py-24 bg-white">
+    <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-8">
 
         <!-- Logos Organitzadors i Col·laboradors -->
         <div class="mb-20 text-center">
+          <h4 data-key="organitza" class="text-base text-gray-600 uppercase tracking-wider mb-7"> Organitza</h4>
+
           <div class="flex flex-wrap justify-center items-center gap-10 md:gap-12 opacity-90">
 
             <div class="w-40 h-24 flex items-center justify-center">
@@ -60,7 +62,7 @@ function loadFooter() {
           </div>
 
           <div>
-            <h4 data-key="recolzament" class="text-base text-gray-600 uppercase tracking-wider mb-6">Amb la col·laboració de</h4>
+            <h4 data-key="recolzament" class="text-base text-gray-600 uppercase tracking-wider mb-6"> Amb el recolzament de</h4>
             <div class="flex flex-wrap justify-center items-center gap-6">
               <img src="img/politicalinguistica_v3.jpg" class="h-16 object-contain">
               <img src="img/educacio_v3.jpg" class="h-16 object-contain">
@@ -69,7 +71,7 @@ function loadFooter() {
           </div>
 
           <div>
-            <h4 data-key="finançament" class="text-base text-gray-600 uppercase tracking-wider mb-6">Amb el recolzament de</h4>
+            <h4 data-key="finançament" class="text-base text-gray-600 uppercase tracking-wider mb-6">Amb el finançament de</h4>
             <div class="flex justify-center gap-4">
               <img src="img/AJBCN_Sign_Com_Vermell_Transparent.png" class="h-12 object-contain">
             </div>
@@ -82,7 +84,7 @@ function loadFooter() {
 
         <!-- Col·laboracions -->
         <div class="pt-7 border-t border-gray-300 text-center mb-16">
-          <h4 data-key="col·laboració" class="text-base text-gray-600 uppercase tracking-wider mb-7">Amb el finançament de</h4>
+          <h4 data-key="col·laboració" class="text-base text-gray-600 uppercase tracking-wider mb-7"> Amb la col·laboració de</h4>
           <div class="flex flex-wrap justify-center items-center gap-12 opacity-80">
             <img src="img/Casa Asia.png" class="h-16 object-contain">
             <img src="img/Logo_Dialegs_v2 (1).png" class="h-16 object-contain">
@@ -101,11 +103,14 @@ function loadFooter() {
           <div>
             <h4  class="text-white text-lg font-semibold mb-6" data-key="heroTitle" >I Jornada d’Acollida Sociolingüística</h4>
             <p class="text-sm leading-relaxed" data-key="footerInfoDesc">
-             Una jornada organitzada per la Coordinadora de la Llengua de Barcelona amb el suport d’entitats compromeses amb l’acollida lingüística i la inclusió.
+             Una jornada organitzada per ACOF i la Coordinadora de la Llengua de Barcelona amb el suport d’entitats compromeses amb l’acollida lingüística i la inclusió.
             </p>
             <p  class="text-xs text-gray-500 mt-8" data-key="heroDate">
             8 de maig de 2026 · Barcelona
             </p>
+            <div class=" w-40 py-4 text-sm">
+              <img src="img/Logo_ACOF letras abajo.png" class="max-h-full max-w-full object-contain">
+            </div>
           </div>
 
           <!-- Columna 2: Enllaços Ràpids -->
@@ -126,26 +131,26 @@ function loadFooter() {
             <h4 class="text-white text-lg font-semibold mb-6" data-key="navContact">CONTACTE</h4>
             
             <div class="space-y-4 text-sm">
-              <a href="mailto:formaciócoordinadora@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors">
+              <a href="mailto:formaciocoordinadora@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors">
                 <i class="fa-solid fa-envelope w-5"></i>
-                <span>formaciócoordinadora@gmail.com</span>
+                <span> formaciocoordinadora@gmail.com</span>
               </a>
               <a href="tel:+34604541305" class="flex items-center gap-3 hover:text-white transition-colors">
                 <i class="fa-solid fa-phone w-5"></i>
-                <span>604 541 305</span>
+                <span>604 54 15 05</span>
               </a>
             </div>
 
             <!-- Iconos de redes sociales -->
             <div class="flex gap-5 mt-10">
-              <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
+              <a href="https://www.instagram.com/acof_bcn/" target="_blank" class="text-gray-400 hover:text-white transition-colors text-2xl">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
+              <a href="https://www.facebook.com/ComissioDeFormacio/" target="_blank"class="text-gray-400 hover:text-white transition-colors text-2xl">
                 <i class="fa-brands fa-facebook"></i>
               </a>
              
-              <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl">
+              <a href="https://x.com/FormacioCoordLL" target="_blank" class="text-gray-400 hover:text-white transition-colors text-2xl">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
             </div>
@@ -154,7 +159,7 @@ function loadFooter() {
         </div>
 
         <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-xs text-gray-500" data-key="pieCredi">
+        <div class="border-t border-gray-800 mt-6 pt-8 text-center text-xs text-gray-500" data-key="pieCredi">
           © 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats
         </div>
 

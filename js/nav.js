@@ -36,7 +36,7 @@ function loadNav() {
 
   const dropdownHTML = programItems.map((item, i) => `
     <div onclick="goToProgram(${i})" class="dropdown-item flex items-center gap-3 px-4 py-3 cursor-pointer  hover:bg-gray-100 transition-all">
-      <i class="fa-solid fa-clock text-purple-600 text-sm"></i>
+      <i class="fa-solid fa-clock text-[#7a044b] text-sm"></i>
       <span class="dropdown-time text-sm font-medium text-gray-700 min-w-[80px]">
         ${item.time}
       </span>

@@ -49,7 +49,7 @@ function createBackToTopButton() {
   btn.id = 'back-to-top';
   btn.innerHTML = `<i class="fa-solid fa-arrow-up text-xl"></i>`;
   btn.className = `
-    fixed bottom-6 right-6 w-14 h-14 bg-purple-700 hover:bg-purple-800 
+    fixed bottom-6 right-6 w-14 h-14 bg-[#7a044b] hover: 
     text-white rounded-full shadow-lg flex items-center justify-center 
     transition-all duration-300 z-50 opacity-0 invisible
   `;
