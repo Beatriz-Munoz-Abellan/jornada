@@ -142,7 +142,7 @@ const translations = {
 
             <!-- Vanessa Bretxa -->
             <div class="flex gap-5 group">
-              <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
+              <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
                 <img src="img/Vanessa Bretxa.jpeg" 
                       alt="Vanessa Bretxa" 
                       class="w-full h-full object-cover ">
@@ -156,7 +156,7 @@ const translations = {
 
             <!-- David Moya -->
             <div class="flex gap-5 group">
-              <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
+              <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white ">
                 <img src="img/foto_david_moya.jpeg" 
                       alt="David Moya" 
                       class="w-full h-full object-cover">
@@ -555,7 +555,7 @@ const translations = {
           
             <!-- Vanessa Bretxa -->
             <div class="flex gap-5 group">
-                <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+                <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                     <img src="img/Vanessa Bretxa.jpeg" 
                           alt="Vanessa Bretxa" 
                           class="w-full h-full object-cover">
@@ -569,7 +569,7 @@ const translations = {
 
             <!-- David Moya -->
             <div class="flex gap-5 groupr">
-                <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+                <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                     <img src="img/foto_david_moya.jpeg" 
                           alt="David Moya" 
                           class="w-full h-full object-cover">
@@ -956,7 +956,7 @@ const translations = {
               
               <!-- Vanessa Bretxa -->
               <div class="flex gap-5 group">
-                  <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+                  <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                       <img src="img/Vanessa Bretxa.jpeg" 
                             alt="Vanessa Bretxa" 
                             class="w-full h-full object-cover">
@@ -970,7 +970,7 @@ const translations = {
 
               <!-- David Moya -->
               <div class="flex gap-5 group">
-                  <div class="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
+                  <div class="w-32 h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white">
                       <img src="img/foto_david_moya.jpeg" 
                             alt="David Moya" 
                             class="w-full h-full object-cover">
