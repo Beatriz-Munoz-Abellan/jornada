@@ -18,9 +18,10 @@ const translations = {
     pieCredi:"© 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats",
 
     // Cookies
-    cookieText:"Utilitzem galetes pròpies i de tercers per millorar la teva experiència, analitzar el trànsit i mostrar contingut personalitzat Pots consultar la nostra <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>",
+    cookieText:"Utilitzem galetes pròpies i de tercers per millorar la teva experiència, analitzar el trànsit i mostrar contingut personalitzat Pots consultar la nostra <a href='politica-cookies.html' class='text-[#7a044b] font-medium hover:underline' >Política de Cookies</a>",
     cookieReject:"Rebutjar",
     cookieAccept:"Acceptar",
+    cookieLink:"Política de Cookies",
 
     legalInfo: "Informació Legal",
     policyTitlePrefix: "Política de",
@@ -51,7 +52,7 @@ const translations = {
     heroDate: "8 de maig de 2026 · Barcelona",
     sectionQuisomTitle: "Què és la jornada?",
     quisomP1: " Les entitats de la <b>Coordinadora de la Llengua de Barcelona</b> organitzen una jornada el 8 de maig a l'Associació de Mestres Rosa Sensat dedicada a l’acollida sociolingüística de persones migrades joves i adultes. L’objectiu és crear un espai de <b>visibilització, formació i debat</b> sobre la tasca que fan diversos agents educatius i socials de la ciutat.",
-    quisomP2: "La jornada reunirà professionals, voluntariat, docents, figures/persones investigadores, responsables de polítiques públiques i persones participants en aquests processos per compartir experiències i analitzar reptes i èxits. També vol reforçar la formació en pràctiques inclusives, especialment davant la manca d’itineraris universitaris específics, i explorar millores en recursos, metodologies i coordinació.",
+    quisomP2: "La jornada reunirà professionals, voluntariat, docents, figures investigadores, responsables de polítiques públiques i persones participants en aquests processos per compartir experiències i analitzar reptes i èxits. També vol reforçar la formació en pràctiques inclusives, especialment davant la manca d’itineraris universitaris específics, i explorar millores en recursos, metodologies i coordinació.",
     quisomP3: "En conjunt, l’esdeveniment busca fomentar la col·laboració i crear una xarxa que contribueixi a una Barcelona més inclusiva, acollidora i diversa.",
     llocTitle: "Lloc de l'esdeveniment",
     llocVenue: "Associació de Mestres Rosa Sensat",
@@ -434,9 +435,10 @@ const translations = {
     pieCredi:"© 2026 I Jornada de Acogida Sociolingüística · Todos los derechos reservados",
 
      // Cookies
-    cookieText:" Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el tráfico y mostrar contenido personalizado. Puedes consultar nuestra <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>",
+    cookieText:" Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el tráfico y mostrar contenido personalizado. Puedes consultar nuestra <a href='politica-cookies.html' class='text-[#7a044b] font-medium hover:underline' >Política de Cookies</a>",
     cookieReject:"Rechazar",
     cookieAccept:"Aceptar",
+    cookieLink:"Política de Cookies",
 
     legalInfo: "Información Legal",
     policyTitlePrefix: "Política de",
@@ -467,7 +469,7 @@ const translations = {
     heroDate: "8 de mayo de 2026 · Barcelona",
     sectionQuisomTitle: "¿Qué es la jornada?",
     quisomP1: "Las entidades de la <b>Coordinadora de la Lengua de Barcelona</b> organizan una jornada el 8 de mayo a la Asociación de Maestras Rosa Sensat dedicada a la acogida sociolingüística de personas migradas jóvenes y adultas. El objetivo es crear un espacio de <b>visibilización, formación y debate</b> sobre la tarea que hacen varios agentes educativos y sociales de la ciudad.",
-    quisomP2: "La jornada reunirá profesionales, voluntariado, docentes, figuras/personas investigadoras, responsables de políticas públicas y personas participantes en estos procesos para compartir experiencias y analizar retos y éxitos. También quiere reforzar la formación en prácticas inclusivas, especialmente ante la carencia de itinerarios universitarios específicos, y explorar mejoras en recursos, metodologías y coordinación.",
+    quisomP2: "La jornada reunirá profesionales, voluntariado, docentes, figuras investigadoras, responsables de políticas públicas y personas participantes en estos procesos para compartir experiencias y analizar retos y éxitos. También quiere reforzar la formación en prácticas inclusivas, especialmente ante la carencia de itinerarios universitarios específicos, y explorar mejoras en recursos, metodologías y coordinación.",
     quisomP3: "En conjunto, el evento busca fomentar la colaboración y crear una red que contribuya a una Barcelona más inclusiva, acogedora y diversa.",
     llocTitle: "Lugar del evento",
     llocVenue: "Asociación de Maestros Rosa Sensat",
@@ -835,9 +837,10 @@ const translations = {
     pieCredi:"© 2026 1st Sociolinguistic Welcome Day · All rights reserved",
     
     // Cookies
-    cookieText:"We use our own and third-party cookies to improve your experience, analyze traffic, and show personalized content. You can check our <a href='politica-cookies.html' class='text-purple-700 font-medium hover:underline' data-key='cookieLink'>Cookies Policy</a>",
+    cookieText:"We use our own and third-party cookies to improve your experience, analyze traffic, and show personalized content. You can check our <a href='politica-cookies.html' class='text-[#7a044b] font-medium hover:underline' '>Cookies Policy</a>",
     cookieReject:"Reject",
     cookieAccept:"Accept",
+    cookieLink:"Cookies Policy",
 
     legalInfo: "Legal Information",
     policyTitlePrefix: "Cookie",
@@ -867,7 +870,7 @@ const translations = {
     heroDate: "May 8, 2026 · Barcelona",
     sectionQuisomTitle: "What is the conference?",
     quisomP1: "The entities of the <b>Coordinadora de la Llengua de Barcelona</b> organize a conference on May 8 at the Rosa Sensat Teachers Association dedicated to the sociolinguistic reception of young and adult migrants. The aim is to create a space for <b>visibility, training and debate</b> on the work carried out by various educational and social agents in the city.",
-    quisomP2: "The day will bring together professionals, volunteers, teachers, research figures/persons, public policy makers and people participating in these processes to share experiences and analyze challenges and achievements. It also wants to strengthen training in inclusive practices, especially in the absence of specific university itineraries, and explore improvements in resources, methodologies and coordination.",
+    quisomP2: "The day will bring together professionals, volunteers, teachers, research figures, public policy makers and people participating in these processes to share experiences and analyze challenges and achievements. It also wants to strengthen training in inclusive practices, especially in the absence of specific university itineraries, and explore improvements in resources, methodologies and coordination.",
     quisomP3: "Overall, the event seeks to foster collaboration and build a network that contributes to a more inclusive, welcoming, and diverse Barcelona.",
     llocTitle: "Event location",
     llocVenue: "Rosa Sensat Teachers Association",

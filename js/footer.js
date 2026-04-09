@@ -14,31 +14,31 @@ function loadFooter() {
 
           <div class="flex flex-wrap justify-center items-center gap-10 md:gap-12 opacity-90">
 
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-32 flex items-center justify-center">
               <img src="img/Logo_ACOF letras abajo.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-32 flex items-center justify-center">
               <img src="img/Coordinadora De La Llengua - 1.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-40 h-32 flex items-center justify-center">
               <img src="img/Camins.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-40 h-32 flex items-center justify-center">
               <img src="img/EICA-Color.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-32 flex items-center justify-center">
               <img src="img/EdV_color_horizontal.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-24 flex items-center justify-center">
               <img src="img/Bayt.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-24 flex items-center justify-center">
               <img src="img/LaTroca_logo_horitzontal.png" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-20 flex items-center justify-center">
               <img src="img/logo CEAR_cat.jpg" class="max-h-full max-w-full object-contain">
             </div>
-            <div class="w-40 h-24 flex items-center justify-center">
+            <div class="w-32 h-24 flex items-center justify-center">
               <img src="img/001 CNL DE BARCELONA.png" class="max-h-full max-w-full object-contain">
             </div>
             <div class="w-40 h-24 flex items-center justify-center">
@@ -57,7 +57,7 @@ function loadFooter() {
           <div>
             <h4 data-key="CertificatUB" class="text-base text-gray-600 uppercase tracking-wider mb-6">Certificat per la UB</h4>
             <div class="flex justify-center">
-              <img src="img/logo ice.png" class="h-16 object-contain">
+              <img src="img/logo ice.png" class="h-14 object-contain">
             </div>
           </div>
 
@@ -73,9 +73,7 @@ function loadFooter() {
           <div>
             <h4 data-key="finançament" class="text-base text-gray-600 uppercase tracking-wider mb-6">Amb el finançament de</h4>
             <div class="flex justify-center gap-4">
-              <img src="img/AJBCN_Sign_Com_Vermell_Transparent.png" class="h-12 object-contain">
-            </div>
-            <div class="flex justify-center gap-4 mt-4">
+              <img src="img/AJBCN_Sign_Com_Vermell_Transparent.png" class="h-16 w-32 object-contain">
               <img src="img/EPIM.jpg" class="h-16 object-contain">
             </div>
           </div>
@@ -85,10 +83,12 @@ function loadFooter() {
         <!-- Col·laboracions -->
         <div class="pt-7 border-t border-gray-300 text-center mb-16">
           <h4 data-key="col·laboració" class="text-base text-gray-600 uppercase tracking-wider mb-7"> Amb la col·laboració de</h4>
-          <div class="flex flex-wrap justify-center items-center gap-12 opacity-80">
-            <img src="img/Casa Asia.png" class="h-16 object-contain">
-            <img src="img/Logo_Dialegs_v2 (1).png" class="h-16 object-contain">
-            <img src="img/Accem.png" class="h-12 object-contain">
+          <div class="flex flex-wrap justify-center items-center gap-4 opacity-80">
+            <img src="img/Casa Asia.png" class="h-16  object-contain">
+            <img src="img/Logo_Dialegs_v2 (1).png" class="h-16 w-32 object-contain">
+            <img src="img/Accem.png" class="h-16 w-32 object-contain">
+            <img src="img/Associació de Mestres Rosa Sensat.png" class="h-16 w-32 object-contain">
+
           </div>
         </div>
       </div>
@@ -159,10 +159,10 @@ function loadFooter() {
         </div>
 
         <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-6 pt-8 text-center text-xs text-gray-500" data-key="pieCredi">
-          © 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats
+        <div class="border-t border-gray-800 mt-6 pt-8 text-center text-xs text-gray-500" >
+          <p data-key="pieCredi">© 2026 I Jornada d’Acollida Sociolingüística · Tots els drets reservats</p>
+          <a href='politica-cookies.html' class='text-[#7a044b] font-medium hover:underline' data-key='cookieLink'>Política de Cookies</a>
         </div>
-
       </div>
     </footer>
   `;

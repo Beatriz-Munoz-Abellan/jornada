@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="icon" type="image/png" href="img/iconL.png">
 
 </head>
+
 <body class="font-sans">
 
   <div id="main-nav"></div>
@@ -18,15 +20,15 @@
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h1 id="prog-hero-title" class="text-5xl md:text-6xl font-bold mb-6" data-key="progHeroTitle"></h1>
       <p class="text-2xl text-purple-200 max-w-2xl mx-auto" data-key="heroDate"></p>
-      
+
       <div class="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm">
         <i class="fa-solid fa-clock"></i>
         <span data-key="heroTime"></span>
       </div>
 
       <div class="mt-10">
-        <a href="#"
-           class="inline-flex items-center gap-3 bg-white text-[#7a044b] hover:bg-purple-50 font-semibold text-lg px-10 py-5 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105">
+        <a href="pdf/Programa I Jornada Acollida Sociolingüística.pdf" download
+          class="inline-flex items-center gap-3 bg-white text-[#7a044b] hover:bg-purple-50 font-semibold text-lg px-10 py-5 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105">
           <i class="fa-solid fa-download text-xl"></i>
           <span data-key="downloadBtn"></span>
         </a>
@@ -37,22 +39,21 @@
   <section id="programa" class="scollBoot py-20 bg-gray-50">
     <div class="max-w-screen-2xl mx-auto px-6">
       <div class="carousel-container relative px-2 md:px-12">
-    
-    <!-- Botón izquierda (oculto en móvil) -->
-    <button id="btn-left" onclick="scrollCarousel(-1)" 
-        class="carousel-btn left-btn  md:flex">
-        <i class="fa-solid fa-chevron-left text-xl md:text-2xl"></i>
-    </button>
 
-    <div id="program-carousel" 
-        class="program-carousel flex gap-4 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth p-4 md:p-8">
+        <!-- Botón izquierda (oculto en móvil) -->
+        <button id="btn-left" onclick="scrollCarousel(-1)" class="carousel-btn left-btn  md:flex">
+          <i class="fa-solid fa-chevron-left text-xl md:text-2xl"></i>
+        </button>
 
-        <!-- CARD -->
-        <div onclick="showDetail(0)" id="card-0" class="program-card active">
+        <div id="program-carousel"
+          class="program-carousel flex gap-4 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth p-4 md:p-8">
+
+          <!-- CARD -->
+          <div onclick="showDetail(0)" id="card-0" class="program-card active">
             <div class="text-2xl md:text-4xl font-bold text-[#7a044b] mb-3">8:30 - 9:15</div>
             <h3 class="font-semibold text-lg md:text-xl" data-key="card0_Title"></h3>
             <p class="text-xs md:text-sm text-gray-500 mt-2" data-key="min45"></p>
-        </div>
+          </div>
           <div onclick="showDetail(1)" id="card-1" class="program-card">
             <div class="text-4xl font-bold text-[#7a044b] mb-3">9:30 - 9:45</div>
             <h3 class="font-semibold text-xl" data-key="card1_Title"></h3>
@@ -78,13 +79,13 @@
             <h3 class="font-semibold text-xl" data-key="card5_Title"></h3>
             <p class="text-sm text-gray-500 mt-2" data-key="min60"></p>
           </div>
-          
+
           <div onclick="showDetail(6)" id="card-6" class="program-card">
             <div class="text-4xl font-bold text-[#7a044b] mb-3">13:45 - 14:30</div>
             <h3 class="font-semibold text-xl" data-key="card6_Title"></h3>
             <p class="text-sm text-gray-500 mt-2" data-key="min75"></p>
           </div>
-           <div onclick="showDetail(7)" id="card-7" class="program-card">
+          <div onclick="showDetail(7)" id="card-7" class="program-card">
             <div class="text-4xl font-bold text-[#7a044b] mb-3">14:30 - 14:45</div>
             <h3 class="font-semibold text-xl" data-key="card7_Title"></h3>
             <p class="text-sm text-gray-500 mt-2" data-key="min15"></p>
@@ -99,7 +100,7 @@
       <div id="program-detail" class="mt-20 bg-white rounded-3xl shadow-lg border border-gray-100 p-10 ">
         <h3 id="detail-title" class="text-3xl font-bold text-gray-800 mb-6"></h3>
         <div id="detail-text" class="text-gray-700 text-lg leading-relaxed">
-            </div>
+        </div>
       </div>
     </div>
   </section>
@@ -113,6 +114,7 @@
   <script src="js/cookis.js"></script>
 
 </body>
+
 </html>
 
 <script>
@@ -134,7 +136,7 @@
         const carouselContainer = document.querySelector('.scollBoot');
         if (carouselContainer) {
           const headerHeight = document.getElementById('main-header')?.offsetHeight || 90;
-          
+
           const elementPosition = carouselContainer.getBoundingClientRect().top + window.scrollY;
           const offsetPosition = elementPosition - headerHeight - 40; // margen superior
 
@@ -156,7 +158,7 @@
           }, 900);
         }
       }, 650); // Tiempo suficiente para que el DOM esté listo
-    } 
+    }
     else {
       // Si no hay parámetro, mostrar el primero por defecto
       setTimeout(() => {
