@@ -48,7 +48,7 @@ const translations = {
 
     // Index & General
     titlePage: "I Jornada d’Acollida Sociolingüística | 8 de maig 2026 · Barcelona",
-    heroTitle: "I Jornada d’Acollida Sociolingüística",
+    heroTitle: "L'acollida: un dret, una xarxa, un futur",
     heroDate: "8 de maig de 2026 · Barcelona",
     sectionQuisomTitle: "Què és la jornada?",
     quisomP1: " Les entitats de la <b>Coordinadora de la Llengua de Barcelona</b> organitzen una jornada el 8 de maig a l'Associació de Mestres Rosa Sensat dedicada a l’acollida sociolingüística de persones migrades joves i adultes. L’objectiu és crear un espai de <b>visibilització, formació i debat</b> sobre la tasca que fan diversos agents educatius i socials de la ciutat.",
@@ -85,7 +85,7 @@ const translations = {
     inscripcioGratuita: "Gratuïta",
     inscripcioLimit: "Places limitades",
     inscripcioConfirm: "Rebràs confirmació per correu electrònic en un termini màxim de 48 hores.",
-    inscripcioDeadline: "1 de maig de 2025",
+    inscripcioDeadline: "Data límit d’inscripció: 1 de maig de 2026",
 
     // Contacto
     contacteTitle: "Contacte - I Jornada d’Acollida Sociolingüística",
@@ -360,10 +360,10 @@ const translations = {
     // Comunicación G
     comG_Title: "COMUNICACIÓ G — Aprenem. Famílies en xarxa (AFEX)",
     comG_Desc: "Programa intercultural i intergeneracional que reforça la participació de famílies migrades en la comunitat educativa. A través de sessions APS dins dels centres, mares, infants i adolescents aprenen llengües d’acollida des de les llengües maternes, amb el suport de dinamitzadores i estudiants en pràctiques.",
-    comG_Name: "Muniba Munir i Ikram Salem",
+    comG_Name: "Muniba Munir i Iqra Sharif",
     comG_Target: "Professorat, tècniques i voluntariat",
-    comG_Bio: "<b>Muniba Munir Siraj</b> És graduada en Filosofia amb un Mínor en Estudis de Gènere. Ha col·laborat en diversos projectes educatius, com AFEX de Casa Àsia, i actualment és professora a Martinet Solidari, escola d’adults del barri del Besòs i el Maresme. Nascuda al Pakistan i criada a Barcelona.",
-    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'> ",
+    comG_Bio: "<b>Muniba Munir Siraj</b> És graduada en Filosofia amb un Mínor en Estudis de Gènere. Ha col·laborat en diversos projectes educatius, com AFEX de Casa Àsia, i actualment és professora a Martinet Solidari, escola d’adults del barri del Besòs i el Maresme. Nascuda al Pakistan i criada a Barcelona.<br><br> <b>Iqra Sharif</b>, barcelonina d’origen pakistanès, parla cinc idiomes i combina la feina d’higienista dental i gestora de xarxes amb els estudis de Farmàcia a la UB. Fa tres anys que és dinamitzadora del projecte AFEX de Casa Àsia, on treballa per trencar barreres lingüístiques i promoure la inclusió de la comunitat asiàtica.",
+    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'><img src='img/G. Iqra.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Iqra Sharif'> ",
 
     // Comunicación H
     comH_Title: "COMUNICACIÓ H — Alfabetització matemàtica per a persones adultes",
@@ -502,7 +502,7 @@ const translations = {
     inscripcioGratuita: "Gratuita",
     inscripcioLimit: "Plazas limitadas",
     inscripcioConfirm: "Recibirás confirmación por correo electrónico en un plazo máximo de 48 horas.",
-    inscripcioDeadline: "1 de mayo de 2025",
+    inscripcioDeadline: "Fecha limite de inscripción: 1 de mayo de 2026",
 
     //Contacto
     contacteTitle: "Contacto - I Jornada de Acogida Sociolingüística",
@@ -765,10 +765,10 @@ const translations = {
     // Comunicación G
     comG_Title: "COMUNICACIÓN G — Aprenem. Familias en red (AFEX)",
     comG_Desc: "Programa intercultural e intergeneracional que refuerza la participación de familias migradas en la comunidad educativa. A través de sesiones APS en los centros, madres, niños y adolescentes aprenden lenguas de acogida desde sus lenguas maternas, con el apoyo de dinamizadoras y estudiantes en prácticas.",
-    comG_Name: "Muniba Munir y Ikram Salem",
+    comG_Name: "Muniba Munir y Iqra Sharif",
     comG_Target: "Profesorado, personal técnico y voluntariado",
-    comG_Bio: "<b>Muniba Munir Siraj</b> Graduada en Filosofía con un Minor en Estudios de Género. Ha colaborado en diversos proyectos educativos, como AFEX de Casa Asia, y actualmente es profesora en Martinet Solidari, escuela de adultos del barrio del Besòs y el Maresme. Nacida en Pakistán y criada en Barcelona.",
-    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'> ",
+    comG_Bio: "<b>Muniba Munir Siraj</b> Graduada en Filosofía con un Minor en Estudios de Género. Ha colaborado en diversos proyectos educativos, como AFEX de Casa Asia, y actualmente es profesora en Martinet Solidari, escuela de adultos del barrio del Besòs y el Maresme. Nacida en Pakistán y criada en Barcelona.<br><br> <b>Iqra Sharif</b>, barcelonesa de origen paquistaní, habla cinco idiomas y combina el trabajo de higienista dental y gestora de redes con los estudios de Farmacia a la UB. Hace tres años que es dinamizadora del proyecto AFEX de Casa Asia, donde trabaja para romper barreras lingüísticas y promover la inclusión de la comunidad asiática.",
+    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'><img src='img/G. Iqra.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Iqra Sharif'> ",
 
     // Comunicación H
     comH_Title: "COMUNICACIÓN H — Alfabetización matemática para personas adultas",
@@ -903,7 +903,7 @@ const translations = {
     inscripcioGratuita: "Free",
     inscripcioLimit: "Limited places",
     inscripcioConfirm: "You will receive confirmation by email within a maximum of 48 hours.",
-    inscripcioDeadline: "May 1, 2025",
+    inscripcioDeadline: "Registration deadline: May 1, 2026",
 
     //Contacto
     contacteTitle: "Contact - 1st Sociolinguistic Welcome Conference",
@@ -1168,10 +1168,10 @@ const translations = {
     // Communication G
     comG_Title: "COMMUNICATION G — Aprenem. Families in network (AFEX)",
     comG_Desc: "Intercultural and intergenerational program that strengthens the participation of migrant families in the educational community. Through service-learning sessions in schools, mothers, children, and adolescents learn reception languages from their mother tongues, supported by facilitators and trainee students.",
-    comG_Name: "Muniba Munir and Ikram Salem",
+    comG_Name: "Muniba Munir and Iqra Sharif",
     comG_Target: "Teachers, technical staff and volunteers",
-    comG_Bio: "<b>Muniba Munir Siraj</b> Graduate in Philosophy with a Minor in Gender Studies. She has collaborated on several educational projects, such as AFEX at Casa Asia, and is currently a teacher at Martinet Solidari, an adult school in the Besòs and Maresme neighborhood. Born in Pakistan and raised in Barcelona.",
-    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'> ",
+    comG_Bio: "<b>Muniba Munir Siraj</b> Graduate in Philosophy with a Minor in Gender Studies. She has collaborated on several educational projects, such as AFEX at Casa Asia, and is currently a teacher at Martinet Solidari, an adult school in the Besòs and Maresme neighborhood. Born in Pakistan and raised in Barcelona. <br><br><b>Iqra Sharif</b>, from Barcelona of Pakistani origin, speaks five languages and combines the work of dental hygienist and network manager with Pharmacy studies at the UB. For three years, she has been promoting the Casa Asia AFEX project, where she works to break down linguistic barriers and promote the inclusion of the Asian community.",
+    imgComuniG: "<img src='img/G. Muniba Munur bé.png' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Muniba Munir Siraj'><img src='img/G. Iqra.jpg' class='w-40 h-40 rounded-2xl object-cover mb-4 shadow-lg border-2 border-white' alt='Iqra Sharif'> ",
 
     // Communication H
     comH_Title: "COMMUNICATION H — Mathematical literacy for adults",
