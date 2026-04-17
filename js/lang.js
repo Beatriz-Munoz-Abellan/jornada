@@ -54,7 +54,7 @@ const translations = {
     sectionQuisomTitle: "Què és la Jornada?",
     quisomP1: " Les entitats de la <b>Coordinadora de la Llengua de Barcelona</b> organitzen una jornada el 8 de maig a l'Associació de Mestres Rosa Sensat dedicada a l’acollida sociolingüística de persones migrades joves i adultes. L’objectiu és crear un espai de <b>visibilització, formació i debat</b> sobre la tasca que fan diversos agents educatius i socials de la ciutat.",
     quisomP2: "La Jornada reunirà professionals, voluntariat, docents, figures investigadores, responsables de polítiques públiques i persones participants en aquests processos per compartir experiències i analitzar reptes i èxits. També vol reforçar la formació en pràctiques inclusives, especialment davant la manca d’itineraris universitaris específics, i explorar millores en recursos, metodologies i coordinació.",
-    quisomP3: "En conjunt, l’esdeveniment busca fomentar la col·laboració i crear una xarxa que contribueixi a una Barcelona més inclusiva, acollidora i diversa.",
+    quisomP3: "En conjunt, l’esdeveniment busca fomentar la col·laboració i crear una xarxa que contribueixi a una societat més inclusiva, acollidora i diversa.",
 
     llocTitle: "Lloc de l'esdeveniment",
     llocVenue: "Associació de Mestres Rosa Sensat",
@@ -129,53 +129,72 @@ const translations = {
 
     min30: "30 min", min60: "60 min", min45: "45 min", min15: "15 min", min75: "1h 15 min",
 
-    content0: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-id-card text-3xl text-[#7a044b]'></i><p>De 8.30 a 9.15 h. Recepció dels participants i lliurament d’acreditacions.</p></div>",
+    content0: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-id-card text-3xl text-[#7a044b]'></i><p>De 8.30 a 9.00 h. Recepció dels participants i lliurament d’acreditacions.</p></div>",
     content1: `
-<div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
+    <div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
 
-  <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8">
-    <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i>
-    <div>
-      <p class="font-semibold text-sm md:text-base text-gray-800">9.15 – 9.45 h.</p>
-      <p class="text-lg md:text-xl font-semibold leading-tight">Obertura de la Jornada - Presentació oficial</p>
+     <!-- Cabecera con franja de color --> 
+      <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8"> 
+        <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i> 
+        <div> 
+          <p class="font-semibold text-sm md:text-base text-gray-800">9:00 – 9:45 h.</p> 
+          <p class="text-lg md:text-xl font-semibold leading-tight">Obertura de la Jornada - Presentació oficial</p> 
+        </div> 
+      </div> 
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"> 
+
+        <!-- Vanessa Bretxa --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Vanessa Bretxa.jpeg" alt="Vanessa Bretxa" class="w-full h-full object-cover"> 
+          </div> 
+
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sra. Vanessa Bretxa</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Directora General d’Accés al Coneixement i Impuls de l’Ús del Català</p> 
+            <p class="text-sm text-gray-500 mt-2">Departament de Política Lingüística</p> 
+          </div> 
+        </div>
+
+        <!-- David Moya --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/foto_david_moya.jpeg" alt="David Moya" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sr. David Moya</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Director General de Migracions i Refugi</p> 
+            <p class="text-sm text-gray-500 mt-2">Departament de Drets Socials</p> 
+          </div> 
+        </div> 
+
+        <!-- Marta Salicrú --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" alt="Marta Salicrú" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sra. Marta Salicrú</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Comisionada de Uso Social del Catalán</p> 
+            <p class="text-sm text-gray-500 mt-2">Ayuntamiento de Barcelona</p> 
+          </div> 
+        </div> 
+
+         <!-- Vicent Barberà Manrique --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/" alt="Sr. Vicent Barberà Manrique" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sr. Vicent Barberà Manrique</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Cap de Servei de Formació al llarg de la Vida</p> 
+            <p class="text-sm text-gray-500 mt-2">Departament d’Educació i Formació Professional</p> 
+          </div> 
+        </div> 
+      </div> 
     </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-    <!-- Vanessa Bretxa -->
-    <div class="flex gap-4">
-      <img src="img/Vanessa Bretxa.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sra. Vanessa Bretxa</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Directora General d’Accés al Coneixement i Impuls de l’Ús del Català</p>
-        <p class="text-sm text-gray-500">Departament de Política Lingüística</p>
-      </div>
-    </div>
-
-    <!-- David Moya -->
-    <div class="flex gap-4">
-      <img src="img/foto_david_moya.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sr. David Moya</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Director General de Migracions i Refugi</p>
-        <p class="text-sm text-gray-500">Departament de Drets Socials</p>
-      </div>
-    </div>
-
-    <!-- Marta Salicrú -->
-    <div class="flex gap-4">
-      <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sra. Marta Salicrú</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Comissionada d’Ús Social del Català</p>
-        <p class="text-sm text-gray-500">Ajuntament de Barcelona</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-`,
+    `,
     content2: `
         <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm overflow-hidden">
             
@@ -489,7 +508,7 @@ const translations = {
     sectionQuisomTitle: "¿Qué es la Jornada?",
     quisomP1: "Las entidades de la <b>Coordinadora de la Llengua de Barcelona</b> organizan una jornada el 8 de mayo en la Associació de Mestres Rosa Sensat dedicada a la acogida sociolingüística de personas migradas jóvenes y adultas. El objetivo es crear un espacio de <b>visibilización, formación y debate</b> sobre la labor que realizan diversos agentes educativos y sociales de la ciudad.",
     quisomP2: "La Jornada reunirá a profesionales, voluntariado, docentes, personal investigador, responsables de políticas públicas y personas participantes en estos procesos para compartir experiencias y analizar retos y logros. También pretende reforzar la formación en prácticas inclusivas, especialmente ante la falta de itinerarios universitarios específicos, y explorar mejoras en recursos, metodologías y coordinación.",
-    quisomP3: "En conjunto, el evento busca fomentar la colaboración y crear una red que contribuya a una Barcelona más inclusiva, acogedora y diversa.",
+    quisomP3: "En conjunto, el evento busca fomentar la colaboración y crear una red que contribuya a una sociedad más inclusiva, acogedora y diversa.",
 
     llocTitle: "Lugar del evento",
     llocVenue: "Associació de Mestres Rosa Sensat",
@@ -567,50 +586,70 @@ const translations = {
     content0: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-id-card text-3xl text-[#7a044b]'></i><p>De 8:30 a 9:00 h. Recepción de los participantes y entrega de acreditaciones.</p></div>",
 
     content1: `
-<div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
+    <div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
 
-  <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8">
-    <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i>
-    <div>
-      <p class="font-semibold text-sm md:text-base text-gray-800">9.15 – 9.45 h.</p>
-      <p class="text-lg md:text-xl font-semibold leading-tight">Apertura de la Jornada - Presentación oficial</p>
+      <!-- Cabecera con franja de color --> 
+      <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8"> 
+        <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i> 
+        <div> 
+          <p class="font-semibold text-sm md:text-base text-gray-800">9:00 – 9:45 h.</p> 
+          <p class="text-lg md:text-xl font-semibold leading-tight">Apertura de la Jornada - Presentación oficial</p> 
+        </div> 
+      </div> 
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"> 
+
+        <!-- Vanessa Bretxa --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Vanessa Bretxa.jpeg" alt="Vanessa Bretxa" class="w-full h-full object-cover"> 
+          </div> 
+
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sra. Vanessa Bretxa</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Directora General de Acceso al Conocimiento e Impulso del Uso del Catalán</p> 
+            <p class="text-sm text-gray-500 mt-2">Departamento de Política Lingüística</p> 
+          </div> 
+        </div>
+
+        <!-- David Moya --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/foto_david_moya.jpeg" alt="David Moya" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sr. David Moya</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Director General de Migraciones y Refugio</p> 
+            <p class="text-sm text-gray-500 mt-2">Departamento de Derechos Sociales</p> 
+          </div> 
+        </div> 
+
+        <!-- Marta Salicrú --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" alt="Marta Salicrú" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sra. Marta Salicrú</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Comisionada de Uso Social del Catalán</p> 
+            <p class="text-sm text-gray-500 mt-2">Ayuntamiento de Barcelona</p> 
+          </div> 
+        </div> 
+
+        <!-- Vicent Barberà Manrique --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/" alt="Sr. Vicent Barberà Manrique" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Sr. Vicent Barberà Manrique</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Jefe del Servicio de Formación a lo largo de la Vida</p> 
+            <p class="text-sm text-gray-500 mt-2">Departamento de Educación y Formación Profesional</p> 
+          </div> 
+        </div> 
+
+      </div> 
     </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-    <!-- Vanessa Bretxa -->
-    <div class="flex gap-4">
-      <img src="img/Vanessa Bretxa.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sra. Vanessa Bretxa</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Directora General de Acceso al Conocimiento e Impulso del Uso del Catalán</p>
-        <p class="text-sm text-gray-500">Departamento de Política Lingüística</p>
-      </div>
-    </div>
-
-    <!-- David Moya -->
-    <div class="flex gap-4">
-      <img src="img/foto_david_moya.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sr. David Moya</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Director General de Migraciones y Refugio</p>
-        <p class="text-sm text-gray-500">Departamento de Derechos Sociales</p>
-      </div>
-    </div>
-
-    <!-- Marta Salicrú -->
-    <div class="flex gap-4">
-      <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Sra. Marta Salicrú</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Comisionada de Uso Social del Catalán</p>
-        <p class="text-sm text-gray-500">Ayuntamiento de Barcelona</p>
-      </div>
-    </div>
-
-  </div>
-</div>
 `,
 
     content2: `
@@ -902,7 +941,7 @@ const translations = {
     sectionQuisomTitle: "What is the Conference?",
     quisomP1: "The organizations of the <b>Coordinadora de la Llengua de Barcelona</b> are organizing a conference on May 8 at the Associació de Mestres Rosa Sensat focused on the sociolinguistic reception of young and adult migrants. The aim is to create a space for <b>visibility, training, and discussion</b> about the work carried out by various educational and social agents in the city.",
     quisomP2: "The conference will bring together professionals, volunteers, teachers, researchers, public policy makers, and participants in these processes to share experiences and analyze challenges and achievements. It also aims to strengthen training in inclusive practices, especially given the lack of specific university pathways, and to explore improvements in resources, methodologies, and coordination.",
-    quisomP3: "Overall, the event seeks to foster collaboration and create a network that contributes to a more inclusive, welcoming, and diverse Barcelona.",
+    quisomP3: "Overall, the event aims to promote collaboration and create a network that contributes to a more inclusive, welcoming, and diverse society.",
 
     llocTitle: "Event location",
     llocVenue: "Associació de Mestres Rosa Sensat",
@@ -980,51 +1019,71 @@ const translations = {
     min30: "30 min", min60: "60 min", min45: "45 min", min15: "15 min", min75: "1h 15 min",
     content0: "<div class='flex items-center gap-4 bg-purple-50 p-6 rounded-2xl'><i class='fa-solid fa-id-card text-3xl text-[#7a044b]'></i><p>From 8:30 to 9:00 am. Participant reception and accreditation distribution.</p></div>",
     content1: `
-<div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
+    <div class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm overflow-hidden">
 
-  <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8">
-    <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i>
-    <div>
-      <p class="font-semibold text-sm md:text-base text-gray-800">9:15 – 9:45 a.m.</p>
-      <p class="text-lg md:text-xl font-semibold leading-tight">Opening of the Conference - Official Presentation</p>
+      <!-- Header with color band --> 
+      <div class="flex items-center gap-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8 py-5 md:py-6 text-[#7a044b] mb-8"> 
+        <i class="fa-solid fa-microphone-lines text-3xl md:text-4xl opacity-90"></i> 
+        <div> 
+          <p class="font-semibold text-sm md:text-base text-gray-800">9:00 – 9:45 h.</p> 
+          <p class="text-lg md:text-xl font-semibold leading-tight">Opening of the Conference - Official Presentation</p> 
+        </div> 
+      </div> 
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"> 
+
+        <!-- Vanessa Bretxa --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Vanessa Bretxa.jpeg" alt="Vanessa Bretxa" class="w-full h-full object-cover"> 
+          </div> 
+
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Ms. Vanessa Bretxa</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Director General for Access to Knowledge and Promotion of the Use of Catalan</p> 
+            <p class="text-sm text-gray-500 mt-2">Department of Language Policy</p> 
+          </div> 
+        </div>
+
+        <!-- David Moya --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/foto_david_moya.jpeg" alt="David Moya" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Mr. David Moya</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Director General for Migration and Refuge</p> 
+            <p class="text-sm text-gray-500 mt-2">Department of Social Rights</p> 
+          </div> 
+        </div> 
+
+        <!-- Marta Salicrú --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" alt="Marta Salicrú" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Ms. Marta Salicrú</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Commissioner for the Social Use of Catalan</p> 
+            <p class="text-sm text-gray-500 mt-2">Barcelona City Council</p> 
+          </div> 
+        </div> 
+
+        <!-- Vicent Barberà Manrique --> 
+        <div class="resMo flex gap-4 md:gap-5 group"> 
+          <div class="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 rounded-2xl overflow-hidden shadow-md ring-2 ring-white"> 
+            <img src="img/" alt="Mr. Vicent Barberà Manrique" class="w-full h-full object-cover"> 
+          </div> 
+          <div class="pt-1"> 
+            <h4 class="font-bold text-gray-900 text-base md:text-lg">Mr. Vicent Barberà Manrique</h4> 
+            <p class="text-[#7a044b] font-semibold mt-1 text-sm md:text-base">Head of Lifelong Learning Service</p> 
+            <p class="text-sm text-gray-500 mt-2">Department of Education and Vocational Training</p> 
+          </div> 
+        </div> 
+
+      </div> 
     </div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-    <!-- Vanessa Bretxa -->
-    <div class="flex gap-4">
-      <img src="img/Vanessa Bretxa.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Ms. Vanessa Bretxa</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Director General for Access to Knowledge and Promotion of the Use of Catalan</p>
-        <p class="text-sm text-gray-500">Department of Language Policy</p>
-      </div>
-    </div>
-
-    <!-- David Moya -->
-    <div class="flex gap-4">
-      <img src="img/foto_david_moya.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Mr. David Moya</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Director General for Migration and Refuge</p>
-        <p class="text-sm text-gray-500">Department of Social Rights</p>
-      </div>
-    </div>
-
-    <!-- Marta Salicrú -->
-    <div class="flex gap-4">
-      <img src="img/Marta Salicrú Comissionada d'Ús Socal del Català.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover shadow-md">
-      <div>
-        <h4 class="font-bold">Ms. Marta Salicrú</h4>
-        <p class="text-[#7a044b] font-semibold text-sm">Commissioner for the Social Use of Catalan</p>
-        <p class="text-sm text-gray-500">Barcelona City Council</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-`,
+    `,
     content2: `
     <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm overflow-hidden">
         

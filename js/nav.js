@@ -24,8 +24,8 @@ function loadNav() {
   const isHome = isHomePage();
 
   const programItems = [
-    { time: "8:30 - 9:15", key: "card0_Title" },
-    { time: "9:15 - 9:45", key: "card1_Title" },
+    { time: "8:30 - 9:00", key: "card0_Title" },
+    { time: "9:00 - 9:45", key: "card1_Title" },
     { time: "9:45 - 10:15", key: "card2_Title" },
     { time: "10:30 - 11:30", key: "card3_Title" },
     { time: "11:30 - 12:15", key: "card4_Title" },

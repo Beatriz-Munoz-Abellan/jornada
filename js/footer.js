@@ -65,6 +65,7 @@ function loadFooter() {
             <h4 data-key="recolzament" class="text-base text-gray-600 uppercase tracking-wider mb-6"> Amb el recolzament de</h4>
             <div class="flex flex-wrap justify-center items-center gap-6">
               <img src="img/politicalinguistica_v3.jpg" class="h-16 object-contain">
+              <img src="img/educacio_v3.jpg" class="h-16 object-contain">
               <img src="img/drets_socials_v3.jpg" class="h-16 object-contain">
             </div>
           </div>
