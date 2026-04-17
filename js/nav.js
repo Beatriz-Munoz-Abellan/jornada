@@ -25,7 +25,7 @@ function loadNav() {
 
   const programItems = [
     { time: "8:30 - 9:15", key: "card0_Title" },
-    { time: "9:30 - 9:45", key: "card1_Title" },
+    { time: "9:15 - 9:45", key: "card1_Title" },
     { time: "9:45 - 10:15", key: "card2_Title" },
     { time: "10:30 - 11:30", key: "card3_Title" },
     { time: "11:30 - 12:15", key: "card4_Title" },
@@ -36,6 +36,7 @@ function loadNav() {
 
   const dropdownHTML = programItems.map((item, i) => `
     <div onclick="goToProgram(${i})" class="dropdown-item flex items-center gap-3 px-4 py-3 cursor-pointer  hover:bg-gray-100 transition-all">
+    
       <i class="fa-solid fa-clock text-[#7a044b] text-sm"></i>
       <span class="dropdown-time text-sm font-medium text-gray-700 min-w-[80px]">
         ${item.time}
@@ -74,6 +75,11 @@ function loadNav() {
               </button>
 
               <div id="dropdown-menu" class="dropdown-content hidden">
+               <div  class="dropdown-item flex m-auto text-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-100 transition-all">
+                <i class="fa-solid fa-calendar-days text-[#7a044b] text-sm"></i>
+               <a href="programa.html" class="text-gray-800 text-sm " data-key="navProgram">PROGRAMA</a>
+               </div>
+
                 ${dropdownHTML}
               </div>
             </div>
